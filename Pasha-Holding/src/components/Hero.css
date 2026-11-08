@@ -498,6 +498,10 @@ body {
 
 @media (max-width: 380px) {
 
+    .hero-text {
+        padding-top: 80px;
+    }
+
     .hero-text span {
         font-size: 2.1rem;
     }
@@ -506,8 +510,14 @@ body {
         font-size: 0.75rem;
     }
 
+    .hero-img {
+        height: 55vh;
+    }
+
     .hero-img img {
-        max-height: 240px;
+        width: 95%;
+        max-width: 95%;
+        max-height: 55vh;
     }
 
     .footer-main {
@@ -528,5 +538,9 @@ body {
 
     .footer-socials a {
         font-size: 12px;
+    }
+
+    .page-dots {
+        bottom: 65px;
     }
 }
