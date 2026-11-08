@@ -274,7 +274,7 @@ body {
     }
 
     .hero-img img {
-        max-height: 430px;
+        max-height: 630px;
     }
 
     .footer-main {
@@ -321,10 +321,6 @@ body {
 
     .hero-img {
         width: 50%;
-    }
-
-    .hero-img img {
-        max-height: 450px;
     }
 
     .footer-main {
