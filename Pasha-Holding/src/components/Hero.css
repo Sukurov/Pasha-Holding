@@ -30,7 +30,7 @@ body {
     height: 230px;
     object-fit: contain;
     opacity: 0;
-    animation: cloudMove 20s linear infinite;
+    animation: cloudMove 30s linear infinite;
 }
 
 @keyframes cloudMove {
