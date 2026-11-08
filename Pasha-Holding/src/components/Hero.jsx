@@ -74,7 +74,7 @@ export default function Hero() {
             <a href="#" aria-label="Facebook">
               <i className="bi bi-facebook"></i>
             </a>
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/lifeatpashagroup?srtk=MXA2ZXNtYjdzcG1oMQ==" aria-label="Instagram">
               <i className="bi bi-instagram"></i>
             </a>
           </div>
