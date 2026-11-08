@@ -1,0 +1,223 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #608AC4;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-weight: 500;
+    overflow: hidden;
+}
+
+/* Main Navbar */
+.main-nav {
+    position: relative;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 30px 45px;
+}
+
+/* Logo */
+.logo img {
+    display: block;
+    width: 180px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Navigation Wrapper */
+.nav-top-bottom {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Top Navigation */
+.nav-top,
+.nav-top ul,
+.nav-top-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-top {
+    gap: 10px;
+}
+
+.nav-top ul {
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-top a {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+.nav-top a:hover {
+    text-decoration: underline;
+}
+
+.nav-top-right {
+    gap: 15px;
+    padding: 0 10px;
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.nav-top-right .icon {
+    padding-left: 5px;
+    color: white;
+    font-size: 2rem;
+}
+
+.nav-top-right a {
+    color: white;
+}
+
+/* Bottom Navigation */
+.nav-bottom > ul {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.dropdown-parent {
+    position: relative;
+}
+
+.dropdown-toggle {
+    padding: 0;
+    border: none;
+    background: transparent;
+    color: white;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.dropdown-toggle:hover {
+    text-decoration: underline;
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: absolute;
+    top: calc(100% + 25px);
+    left: 0;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 400px;
+    padding: 15px 0;
+    border-radius: 15px;
+    background: white;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+
+    transition:
+        opacity 0.4s ease,
+        transform 0.4s ease,
+        visibility 0.4s ease;
+}
+
+/* Dropdown Hover Area */
+.dropdown-parent::after {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    content: "";
+}
+
+/* Dropdown Open */
+.dropdown-parent:hover .dropdown,
+.dropdown-parent.dropdown-open .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Dropdown Links */
+.dropdown a {
+    padding: 13px 20px;
+    color: #6C93C8;
+    font-size: 14px;
+    line-height: 1.5;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.dropdown a:hover {
+    padding-left: 27px;
+    background: #e7c6c696;
+}
+
+.dropdown-parent:nth-child(n + 2) .dropdown {
+    width: 200px;
+}
+
+.dropdown-parent:nth-child(n + 7) .dropdown {
+    width: 150px;
+}
+
+/* Right Navigation */
+.nav-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-left: auto;
+    padding: 20px;
+    color: white;
+}
+
+.language {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.language span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 32px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+}
+
+.search-icon {
+    display: flex;
+    align-items: center;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* Mobile Menu Button */
+.menu-toggle {
+    display: none;
+    padding: 5px;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
