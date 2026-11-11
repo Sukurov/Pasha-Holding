@@ -62,7 +62,7 @@ function Icmal() {
         }
       });
 
-      // Statistikalar
+      // Statistikaların görünmə animasiyası
       gsap.from('.icmal-box-pul-vahid', {
         y: 50,
         opacity: 0,
@@ -74,6 +74,37 @@ function Icmal() {
           start: 'top 85%',
           once: true
         }
+      });
+
+      // Statistikaların 0-dan artması
+      const counters = gsap.utils.toArray(
+        '.icmal-box-pul-vahid span'
+      );
+
+      counters.forEach((counter) => {
+        const target = Number(counter.dataset.count);
+        const decimals = Number(counter.dataset.decimals || 0);
+        const suffix = counter.dataset.suffix || '';
+
+        const value = { number: 0 };
+
+        gsap.to(value, {
+          number: target,
+          duration: 2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.icmal-box-pul-vahid-main',
+            start: 'top 85%',
+            once: true
+          },
+          onUpdate: () => {
+            counter.textContent =
+              value.number.toLocaleString('en-US', {
+                minimumFractionDigits: decimals,
+                maximumFractionDigits: decimals
+              }) + suffix;
+          }
+        });
       });
 
       // PAŞA şirkətlərinin loqoları
@@ -151,37 +182,37 @@ function Icmal() {
           <div className="icmal-box-pul-vahid-main">
 
             <div className="icmal-box-pul-vahid">
-              <span>20.5 mlrd. AZN</span>
+              <span data-count="20.5" data-decimals="1" data-suffix=" mlrd. AZN">0 mlrd. AZN</span>
               <p>31 dekabr 2023-cü il tarixi üçün Cəmi Aktivlər</p>
             </div>
 
             <div className="icmal-box-pul-vahid">
-              <span>23.3 mlrd. AZN</span>
+              <span data-count="23.3" data-decimals="1" data-suffix=" mlrd. AZN">0 mlrd. AZN</span>
               <p>31 dekabr 2024-cü il tarixi üçün Cəmi Aktivlər</p>
             </div>
 
             <div className="icmal-box-pul-vahid">
-              <span>2.83 mlrd. AZN</span>
+              <span data-count="2.83" data-decimals="2" data-suffix=" mlrd. AZN">0 mlrd. AZN</span>
               <p>31 dekabr 2023-cü il tarixi üçün Cəmi Kapital</p>
             </div>
 
             <div className="icmal-box-pul-vahid">
-              <span>2.98 mlrd. AZN</span>
+              <span data-count="2.98" data-decimals="2" data-suffix=" mlrd. AZN">0 mlrd. AZN</span>
               <p>31 dekabr 2024-cü il tarixi üçün Cəmi Kapital</p>
             </div>
 
             <div className="icmal-box-pul-vahid">
-              <span>2.4 mlrd. AZN</span>
+              <span data-count="2.4" data-decimals="1" data-suffix=" mlrd. AZN">0 mlrd. AZN</span>
               <p>31 dekabr 2023-cü il tarixi üçün Ümumi Gəlir</p>
             </div>
 
             <div className="icmal-box-pul-vahid">
-              <span>3.07 mlrd. AZN</span>
+              <span data-count="3.07" data-decimals="2" data-suffix=" mlrd. AZN">0 mlrd. AZN</span>
               <p>31 dekabr 2024-cü il tarixi üçün Ümumi Gəlir</p>
             </div>
 
             <div className="icmal-box-pul-vahid">
-              <span>35.2%</span>
+              <span data-count="35.2" data-decimals="1" data-suffix="%">0%</span>
               <p>
                 31 dekabr 2023-cü il tarixi üçün Azərbaycanın
                 bank sektorunda aktivlər üzrə Bazar Payı
@@ -189,7 +220,7 @@ function Icmal() {
             </div>
 
             <div className="icmal-box-pul-vahid">
-              <span>36.97%</span>
+              <span data-count="36.97" data-decimals="2" data-suffix="%">0%</span>
               <p>
                 31 dekabr 2024-cü il tarixi üçün Azərbaycanın
                 bank sektorunda aktivlər üzrə Bazar Payı
@@ -197,7 +228,7 @@ function Icmal() {
             </div>
 
             <div className="icmal-box-pul-vahid">
-              <span>20,000+</span>
+              <span data-count="20000" data-suffix="+">0+</span>
               <p>
                 31 dekabr 2023-cü il tarixi üçün Qrup üzrə
                 Ümumi İşçi Sayı
@@ -205,7 +236,7 @@ function Icmal() {
             </div>
 
             <div className="icmal-box-pul-vahid">
-              <span>22,000+</span>
+              <span data-count="22000" data-suffix="+">0+</span>
               <p>
                 31 dekabr 2024-cü il tarixi üçün Qrup üzrə
                 Ümumi İşçi Sayı
