@@ -66,6 +66,13 @@ function Navbar() {
             {/* Yuxarı və aşağı menyu hissələri */}
             <div className={`nav-top-bottom ${menuOpen ? 'menu-open' : ''}`}>
 
+                {/* Mobil menyuda görünən logo */}
+                <div className="mobile-menu-logo">
+                    <a href="/" onClick={closeMenus}>
+                        <img src="/images/logo2.svg" alt="PAŞA Holding" />
+                    </a>
+                </div>
+
                 {/* Yuxarı menyu */}
                 <div className="nav-top">
                     <ul>

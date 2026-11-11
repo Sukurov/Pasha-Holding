@@ -1,6 +1,5 @@
 
 /* TABLET - 1024px */
-
 @media (max-width: 1024px) {
     .hero-main {
         min-height: calc(100vh - 90px);
@@ -38,7 +37,6 @@
 }
 
 /* SMALL TABLET - 768px */
-
 @media (max-width: 768px) {
     .hero-main {
         min-height: calc(100vh - 80px);
@@ -104,7 +102,6 @@
 }
 
 /* MOBILE - 617px */
-
 @media (max-width: 617px) {
     body {
         overflow: hidden;
@@ -230,11 +227,8 @@
     }
 }
 
-/* EXTRA SMALL MOBILE - 380px */
-
+/* EXTRA SMALL MOBILE - 400px */
 @media (max-width: 400px) {
-
-
     .hero-text span {
         font-size: 2.1rem;
     }
