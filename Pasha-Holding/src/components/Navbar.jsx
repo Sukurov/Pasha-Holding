@@ -1,7 +1,7 @@
-
 import React, { useState } from 'react';
 import './Navbar.css';
 import './NavbarResponsive.css';
+import { Link } from 'react-router-dom';
 
 import { LiaUsersSolid } from 'react-icons/lia';
 import { FiSearch, FiMenu, FiX } from 'react-icons/fi';
@@ -44,7 +44,7 @@ function Navbar() {
                                 Haqqımızda
                             </button>
                             <div className="dropdown">
-                                <a href="#">Paşa Qrup İcmalı</a>
+                                <Link to="/icmal">Paşa Qrup İcmalı</Link>
                                 <a href="#">Direktorun Müraciəti</a>
                                 <a href="#">Dəyərlərimiz, Məqsədlərimiz, Baxışımız və Missiyamız</a>
                                 <a href="#">Liderlik DNT-miz</a>

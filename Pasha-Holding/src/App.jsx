@@ -1,15 +1,21 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import React from 'react'
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Icmal from './components/navbar_kecid/icmal';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-    </>
-  )
+
+      <Routes>
+        <Route path="/" element={<Hero />} />
+        <Route path="/icmal" element={<Icmal />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
