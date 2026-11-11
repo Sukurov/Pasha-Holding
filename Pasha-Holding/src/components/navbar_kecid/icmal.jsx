@@ -76,8 +76,7 @@ function Icmal() {
         }
       });
 
-
-      // Scroll etdikcə statistikaların artması
+      // Statistikaların 0-dan bir dəfə artması
       const counters = gsap.utils.toArray(
         '.icmal-box-pul-vahid span'
       );
@@ -91,12 +90,12 @@ function Icmal() {
 
         gsap.to(value, {
           number: target,
-          ease: 'none',
+          duration: 2,
+          ease: 'power2.out',
           scrollTrigger: {
-            trigger: '.icmal-box-pul-vahid-main',
+            trigger: counter,
             start: 'top 85%',
-            end: 'bottom 40%',
-            scrub: 1
+            once: true
           },
           onUpdate: () => {
             counter.textContent =
@@ -107,7 +106,6 @@ function Icmal() {
           }
         });
       });
-
 
       // PAŞA şirkətlərinin loqoları
       gsap.from('.pasha-bank', {
