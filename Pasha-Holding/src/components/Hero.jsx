@@ -98,7 +98,7 @@ export default function Hero() {
                     </p>
 
                     <div className="hero-text-hover">
-                        <a href="#">D A H A E T R A F L I</a>
+                        <a href="https://pasha-holding.vercel.app/icmal">D A H A E T R A F L I</a>
                         <div className="hero-text-hover-line"></div>
                     </div>
                 </div>
