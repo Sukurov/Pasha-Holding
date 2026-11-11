@@ -71,7 +71,7 @@ body {
     flex-direction: column;
     gap: 20px;
     padding: 100px 0 100px 70px;
-    z-index: 555;
+    z-index: 2;
 }
 
 .hero-text span {
