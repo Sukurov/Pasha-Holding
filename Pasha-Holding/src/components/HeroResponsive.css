@@ -232,7 +232,7 @@
 
 /* EXTRA SMALL MOBILE - 380px */
 
-@media (max-width: 380px) {
+@media (max-width: 400px) {
     .hero-text {
         padding-top: 80px;
     }
@@ -250,7 +250,7 @@
     }
 
     .hero-img img {
-        max-height: 45vh;
+        max-height: 50vh;
     }
 
     .footer-main {
