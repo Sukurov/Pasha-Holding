@@ -69,7 +69,7 @@ function Navbar() {
                 {/* Mobil menyu loqosu */}
                 <div className="mobile-menu-logo">
                     <a href="/" onClick={closeMenus}>
-                        <img src="/images/logo2.svg" alt="PAŞA Holding" />
+                        <img src="/images/logo.svg" alt="PAŞA Holding" />
                     </a>
                 </div>
 
