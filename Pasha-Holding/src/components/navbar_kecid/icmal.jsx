@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
 
-export default function icmal() {
+function Icmal() {
   return (
-    <div>icmal</div>
-  )
+    <div>
+      <h1>Paşa Qrup İcmalı</h1>
+    </div>
+  );
 }
+
+export default Icmal;
