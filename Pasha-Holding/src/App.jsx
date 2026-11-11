@@ -6,16 +6,16 @@ import Hero from './components/Hero';
 import Icmal from './components/navbar_kecid/icmal.jsx';
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Navbar />
+    return (
+        <BrowserRouter>
+            <Navbar />
 
-      <Routes>
-        <Route path="/" element={<Hero />} />
-        <Route path="/icmal" element={<Icmal />} />
-      </Routes>
-    </BrowserRouter>
-  );
+            <Routes>
+                <Route path="/" element={<Hero />} />
+                <Route path="/icmal" element={<Icmal />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;
