@@ -1,0 +1,41 @@
+
+/* Əsas fon şəkli */
+
+.icmal-page::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/qrup_icmali.png');
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: brightness(0.8) contrast(1.1);
+}
+
+/* Məzmunun yerləşməsi */
+
+.icmal-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Ağ mətn qutusu */
+
+.icmal-box {
+    width: 80%;
+    min-height: 300px;
+    padding: 40px;
+    background: white;
+    border-radius: 5px;
+}
+
+/* Başlıq */
+
+.icmal-box h1 {
+    color: #00845A;
+    font-size: 32px;
+}

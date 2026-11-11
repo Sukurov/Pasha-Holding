@@ -1,5 +1,6 @@
 
 /* SMALL DESKTOP - 1200px */
+
 @media (max-width: 1200px) {
     .main-nav {
         gap: 25px;
@@ -26,6 +27,7 @@
 }
 
 /* TABLET - 1024px */
+
 @media (max-width: 1024px) {
     .main-nav {
         flex-wrap: wrap;
@@ -37,6 +39,7 @@
         width: 145px;
     }
 
+    /* Mobil menyu düyməsi */
     .menu-toggle {
         position: relative;
         z-index: 1003;
@@ -46,36 +49,31 @@
         margin-left: auto;
     }
 
+    /* Sağ tərəfdəki ikonlar */
     .nav-right {
         margin-left: 0;
         padding: 0;
     }
 
-    /* FULL SCREEN MENU */
+    /* Açılan mobil menyu */
     .nav-top-bottom {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1001;
-
         display: flex;
         flex-direction: column;
-
         width: 100%;
         height: 100vh;
         height: 100dvh;
         max-height: none;
-
         padding: 110px 30px 35px;
         overflow-y: auto;
         overflow-x: hidden;
-
         background: #608AC4;
-
         opacity: 0;
         visibility: hidden;
         transform: translateX(100%);
-
         transition:
             transform 0.4s ease,
             opacity 0.4s ease,
@@ -85,15 +83,14 @@
     .nav-top-bottom.menu-open {
         max-height: none;
         padding: 110px 30px 35px;
-
+        overflow-y: auto;
+        overflow-x: hidden;
         opacity: 1;
         visibility: visible;
         transform: translateX(0);
-
-        overflow-y: auto;
-        overflow-x: hidden;
     }
 
+    /* Yuxarı menyu */
     .nav-top {
         align-items: flex-start;
         flex-direction: column;
@@ -107,6 +104,7 @@
         gap: 15px 20px;
     }
 
+    /* Aşağı menyu */
     .nav-bottom > ul {
         align-items: stretch;
         flex-direction: column;
@@ -124,6 +122,7 @@
         font-size: 16px;
     }
 
+    /* Mobil dropdown menyular */
     .dropdown {
         position: static;
         width: 100% !important;
@@ -136,7 +135,6 @@
         opacity: 0;
         visibility: hidden;
         transform: none;
-
         transition:
             max-height 0.3s ease,
             opacity 0.3s ease,
@@ -157,6 +155,7 @@
         visibility: visible;
     }
 
+    /* Dropdown linkləri */
     .dropdown a {
         display: block;
         padding: 11px 15px;
@@ -168,9 +167,27 @@
         padding-left: 22px;
         background: rgba(255, 255, 255, 0.12);
     }
+
+    /* İcmal səhifəsinin mobil menyusu */
+    .main-nav.inner-page .nav-top-bottom,
+    .main-nav.inner-page .nav-top-bottom.menu-open {
+        background: white;
+    }
+
+    .main-nav.inner-page .nav-top a,
+    .main-nav.inner-page .dropdown-toggle,
+    .main-nav.inner-page .nav-top-right a,
+    .main-nav.inner-page .dropdown a {
+        color: #00845A;
+    }
+
+    .main-nav.inner-page .dropdown-parent.dropdown-open .dropdown {
+        background: rgba(0, 132, 90, 0.08);
+    }
 }
 
 /* MOBILE - 617px */
+
 @media (max-width: 617px) {
     .main-nav {
         gap: 12px;
@@ -199,11 +216,13 @@
         font-size: 25px;
     }
 
+    /* Açılan menyunun boşluqları */
     .nav-top-bottom,
     .nav-top-bottom.menu-open {
         padding: 100px 20px 30px;
     }
 
+    /* Yuxarı menyu */
     .nav-top {
         gap: 15px;
     }
@@ -226,6 +245,7 @@
         font-size: 0.85rem;
     }
 
+    /* Dropdown menyular */
     .dropdown-toggle {
         font-size: 0.9rem;
     }
@@ -236,6 +256,7 @@
 }
 
 /* EXTRA SMALL MOBILE - 380px */
+
 @media (max-width: 380px) {
     .main-nav {
         padding: 15px 10px;
@@ -262,4 +283,3 @@
         padding: 90px 20px 25px;
     }
 }
-

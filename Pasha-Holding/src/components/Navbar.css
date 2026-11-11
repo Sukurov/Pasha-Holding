@@ -1,4 +1,8 @@
 
+/* ==============================
+   ÜMUMİ AYARLAR
+============================== */
+
 * {
     margin: 0;
     padding: 0;
@@ -12,7 +16,11 @@ body {
     overflow: hidden;
 }
 
-/* Main Navbar */
+
+/* ==============================
+   ƏSAS NAVBAR
+============================== */
+
 .main-nav {
     position: relative;
     z-index: 100;
@@ -22,7 +30,9 @@ body {
     padding: 30px 45px;
 }
 
+
 /* Logo */
+
 .logo img {
     display: block;
     width: 180px;
@@ -30,14 +40,20 @@ body {
     object-fit: contain;
 }
 
-/* Navigation Wrapper */
+
+/* Navbar-ın menyu hissələri */
+
 .nav-top-bottom {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-/* Top Navigation */
+
+/* ==============================
+   YUXARI MENYU
+============================== */
+
 .nav-top,
 .nav-top ul,
 .nav-top-right {
@@ -80,7 +96,11 @@ body {
     color: white;
 }
 
-/* Bottom Navigation */
+
+/* ==============================
+   AŞAĞI MENYU
+============================== */
+
 .nav-bottom > ul {
     display: flex;
     align-items: center;
@@ -106,7 +126,11 @@ body {
     text-decoration: underline;
 }
 
-/* Dropdown Menu */
+
+/* ==============================
+   AÇILAN ALT MENYULAR
+============================== */
+
 .dropdown {
     position: absolute;
     top: calc(100% + 25px);
@@ -132,7 +156,9 @@ body {
         visibility 0.4s ease;
 }
 
-/* Dropdown Hover Area */
+
+/* Alt menyunun hover sahəsi */
+
 .dropdown-parent::after {
     position: absolute;
     top: 100%;
@@ -142,7 +168,9 @@ body {
     content: "";
 }
 
-/* Dropdown Open */
+
+/* Alt menyunun açılması */
+
 .dropdown-parent:hover .dropdown,
 .dropdown-parent.dropdown-open .dropdown {
     opacity: 1;
@@ -150,13 +178,16 @@ body {
     transform: translateY(0);
 }
 
-/* Dropdown Links */
+
+/* Alt menyudakı linklər */
+
 .dropdown a {
     padding: 13px 20px;
     color: #6C93C8;
     font-size: 14px;
     line-height: 1.5;
     text-decoration: none;
+
     transition:
         background-color 0.2s ease,
         padding-left 0.2s ease;
@@ -167,6 +198,9 @@ body {
     background: #e7c6c696;
 }
 
+
+/* Alt menyuların ölçüləri */
+
 .dropdown-parent:nth-child(n + 2) .dropdown {
     width: 200px;
 }
@@ -175,7 +209,11 @@ body {
     width: 150px;
 }
 
-/* Right Navigation */
+
+/* ==============================
+   SAĞ TƏRƏFDƏKİ İKONLAR
+============================== */
+
 .nav-right {
     display: flex;
     align-items: center;
@@ -185,6 +223,9 @@ body {
     padding: 20px;
     color: white;
 }
+
+
+/* Dil seçimi */
 
 .language {
     display: flex;
@@ -204,6 +245,9 @@ body {
     border-radius: 2px;
 }
 
+
+/* Axtarış ikonu */
+
 .search-icon {
     display: flex;
     align-items: center;
@@ -211,7 +255,11 @@ body {
     cursor: pointer;
 }
 
-/* Mobile Menu Button */
+
+/* ==============================
+   MOBİL MENYU DÜYMƏSİ
+============================== */
+
 .menu-toggle {
     display: none;
     padding: 5px;
@@ -220,4 +268,71 @@ body {
     color: white;
     font-size: 28px;
     cursor: pointer;
+}
+
+
+/* ==============================
+   DAXİLİ SƏHİFƏLƏRİN NAVBAR-I
+============================== */
+
+/* İlkin fon və keçid effekti */
+
+.main-nav.inner-page {
+    background: transparent;
+    transition: background 0.3s ease;
+}
+
+
+/* Daxili səhifələrdə yaşıl yazılar və ikonlar */
+
+.main-nav.inner-page .nav-top a,
+.main-nav.inner-page .nav-top-right .icon,
+.main-nav.inner-page .dropdown-toggle,
+.main-nav.inner-page .nav-right,
+.main-nav.inner-page .language,
+.main-nav.inner-page .menu-toggle {
+    color: #00845A;
+}
+
+/* Yuxarı sağ menyudakı yazı */
+
+.main-nav.inner-page .nav-top-right a {
+    color: #00845A;
+}
+
+
+/* Yuxarı menyunun sol xətti */
+
+.main-nav.inner-page .nav-top-right {
+    border-left-color: #00845A;
+}
+
+
+/* Daxili səhifələrdə açılan alt menyular */
+
+.main-nav.inner-page .dropdown a {
+    color: #00845A;
+}
+
+.main-nav.inner-page .dropdown a:hover {
+    color: #006B48;
+}
+
+
+/* ==============================
+   SCROLL ZAMANI NAVBAR
+============================== */
+
+/* Scroll zamanı ağ fon */
+
+.main-nav.inner-page.scrolled {
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Scroll zamanı dil çərçivəsi */
+
+.main-nav.inner-page.scrolled .language span {
+    border-color: #00845A;
 }
