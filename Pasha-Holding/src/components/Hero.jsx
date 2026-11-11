@@ -1,9 +1,72 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
+import { gsap } from 'gsap';
 import './Hero.css';
 import './HeroResponsive.css';
 
 export default function Hero() {
+
+    useEffect(() => {
+        const ctx = gsap.context(() => {
+
+            // Əsas animasiya ardıcıllığı
+            const tl = gsap.timeline({
+                defaults: {
+                    ease: 'power3.out'
+                }
+            });
+
+            // Başlıq
+            tl.from('.hero-text span', {
+                x: -80,
+                opacity: 0,
+                duration: 1.2
+            })
+
+            // Açıqlama mətni
+            .from('.hero-text p', {
+                y: 35,
+                opacity: 0,
+                duration: 0.9
+            }, '-=0.6')
+
+            // Daha ətraflı
+            .from('.hero-text-hover', {
+                y: 25,
+                opacity: 0,
+                duration: 0.8
+            }, '-=0.5')
+
+            // Bina şəkli
+            .from('.hero-img img', {
+                x: 120,
+                opacity: 0,
+                duration: 1.5,
+                ease: 'power2.out'
+            }, '-=1')
+
+            // Footer
+            .from('.footer-main', {
+                y: 25,
+                opacity: 0,
+                duration: 0.8
+            }, '-=0.5')
+
+            // Səhifə nöqtələri
+            .from('.page-dots button', {
+                scale: 0,
+                opacity: 0,
+                duration: 0.5,
+                stagger: 0.1,
+                ease: 'back.out(1.7)'
+            }, '-=0.4');
+
+        });
+
+        return () => ctx.revert();
+
+    }, []);
+
     const handleDotClick = (index) => {
         document.getElementById(`section-${index + 1}`)?.scrollIntoView({
             behavior: 'smooth',
@@ -24,6 +87,7 @@ export default function Hero() {
 
             {/* Əsas bölmə */}
             <div className="hero-main">
+
                 <div className="hero-text">
                     <span>PAŞA Holding</span>
 
@@ -42,12 +106,15 @@ export default function Hero() {
                 <div className="hero-img">
                     <img src="/images/bina.png" alt="PAŞA Holding" />
                 </div>
+
             </div>
 
             {/* Footer */}
             <div className="footer-main">
+
                 <div className="footer-left">
                     <span>© 2026 PAŞA Holding</span>
+
                     <span>
                         Site by <a href="#">JIS</a>
                     </span>
@@ -86,6 +153,7 @@ export default function Hero() {
                         </a>
                     </div>
                 </div>
+
             </div>
 
             {/* Aşağı dekorativ şəkil */}
