@@ -171,6 +171,7 @@
     }
 
     .hero-img img {
+        max-width: 85%;
         max-height: 52vh;
         height: auto;
         object-fit: contain;
