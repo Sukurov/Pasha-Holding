@@ -6,8 +6,8 @@ function Icmal() {
     return (
         <div className="icmal-page">
             <div className="icmal-content">
-                <div className="icmal-box">
                     <h1>Paşa Qrup İcmalı</h1>
+                <div className="icmal-box">
                 </div>
             </div>
         </div>
