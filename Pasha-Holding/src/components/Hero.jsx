@@ -1,6 +1,7 @@
 
 import React from 'react';
 import './Hero.css';
+import './HeroResponsive.css';
 
 export default function Hero() {
   const handleDotClick = (index) => {
