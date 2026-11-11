@@ -1,15 +1,26 @@
+/* Əsas səhifə */
+
+.icmal-page {
+    position: relative;
+    --bg-scale: 1;
+}
 
 /* Əsas fon şəkli */
 
 .icmal-page::before {
     content: "";
-    position: absolute;
+    position: fixed;
     inset: 0;
+    z-index: 0;
     background-image: url('/images/qrup_icmali.png');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
     filter: brightness(0.8) contrast(1.1);
+    transform: scale(var(--bg-scale));
+    transform-origin: center;
+    will-change: auto;
+    pointer-events: none;
 }
 
 /* Məzmunun yerləşməsi */
@@ -18,24 +29,167 @@
     position: relative;
     z-index: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    gap: 100px;
+    padding: 150px 0 50px;
+}
+
+/* Başlıq */
+
+.icmal-content h1 {
+    margin-top: 120px;
+    color: #00845A;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 4rem;
+    font-weight: 600;
 }
 
 /* Ağ mətn qutusu */
 
 .icmal-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 80%;
     min-height: 300px;
-    padding: 40px;
-    background: white;
+    padding: 60px;
     border-radius: 5px;
+    background: white;
 }
 
-/* Başlıq */
+/* İcmal məlumatları */
 
-.icmal-box h1 {
+.icmal-box-top {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.icmal-box-top span {
+    font-size: 1.3rem;
+}
+
+.icmal-box-top p {
+    color: rgba(0, 0, 0, 0.524);
+    font-size: 0.9rem;
+}
+
+/* Pul vahidləri bölməsi */
+
+.icmal-box-pul-vahid-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.263);
+}
+
+.icmal-box-pul-vahid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    padding: 30px 0;
+    will-change: transform, opacity;
+    text-align: center;
+}
+
+.icmal-box-pul-vahid span {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 2rem;
+}
+
+.icmal-box-pul-vahid p {
+    font-size: 0.9rem;
+    max-width: 350px;
+}
+
+.icmal-box .pasha-box-main {
+    padding-top: 40px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.icmal-box .pasha-box-main .pasha-bank {
+    padding: 60px 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #5453538e;
+    will-change: transform, opacity;
+}
+
+.icmal-box .pasha-box-main .pasha-bank img {
+    width: 150px;
+    height: 50px;
+    scale: 1;
+    opacity: 0.4;
+    transition: 0.2s;
+}
+
+.icmal-box .pasha-box-main .pasha-bank:hover img {
+    opacity: 1;
+    transition: 0.2s;
+    object-fit: contain;
+}
+
+.icmal-box .pasha-box-main .pasha-bank:hover {
+    border: 1px solid #54535326;
+}
+
+/* Footer */
+
+.icmal-footer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 60px;
+    padding: 12px 50px;
     color: #00845A;
-    font-size: 32px;
+    font-size: 12px;
+}
+
+.icmal-footer-left,
+.icmal-footer-right,
+.icmal-footer-socials {
+    display: flex;
+    align-items: center;
+}
+
+.icmal-footer-left {
+    gap: 30px;
+}
+
+.icmal-footer a {
+    color: #00845A;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.icmal-footer-socials {
+    gap: 15px;
+}
+
+.icmal-footer-socials a {
+    color: #00845A;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.icmal-footer-socials a:hover {
+    opacity: 0.7;
 }

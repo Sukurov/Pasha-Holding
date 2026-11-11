@@ -11,7 +11,10 @@ function AppContent() {
     // Səhifəyə uyğun body fon rəngini dəyişir
     useEffect(() => {
         document.body.style.background =
-            pathname === '/' ? '#608AC4' : 'white';
+            pathname === '/' ? '#608AC4' : 'transparent';
+
+        document.body.style.overflow =
+            pathname === '/' ? 'hidden' : 'auto';
     }, [pathname]);
 
     return (
