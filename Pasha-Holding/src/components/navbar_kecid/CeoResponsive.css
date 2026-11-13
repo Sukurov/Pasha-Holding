@@ -1,0 +1,216 @@
+
+/* ==============================
+   TABLET - 1024px
+============================== */
+
+@media (max-width: 1024px) {
+    .ceo-page {
+        padding: 140px 25px 0;
+    }
+
+    .ceo-content {
+        width: 95%;
+        padding: 35px 30px;
+    }
+
+    .ceo-content h1 {
+        font-size: 27px;
+    }
+
+    .ceo-content-main {
+        gap: 25px;
+    }
+
+    .ceo-img {
+        flex: 0 0 240px;
+    }
+
+    .ceo-text p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .ceo-footer {
+        padding: 12px 30px;
+    }
+}
+
+
+/* ==============================
+   TABLET - 768px
+============================== */
+
+@media (max-width: 768px) {
+    .ceo-page {
+        padding: 130px 20px 0;
+    }
+
+    .ceo-content {
+        width: 100%;
+        padding: 30px 25px;
+    }
+
+    .ceo-content h1 {
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    .ceo-content-main {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    /* Şəkil və məlumat yuxarıda */
+    .ceo-img {
+        order: -1;
+        flex: none;
+        width: 260px;
+        max-width: 100%;
+    }
+
+    .ceo-img img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .ceo-img-info {
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .ceo-img-info h3 {
+        font-size: 18px;
+    }
+
+    .ceo-img-info p {
+        font-size: 13px;
+    }
+
+    /* Mətn aşağıda */
+    .ceo-text {
+        order: 1;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .ceo-text p {
+        font-size: 15px;
+        line-height: 1.8;
+        text-align: left;
+    }
+
+    .ceo-footer {
+        padding: 15px 20px;
+    }
+}
+
+
+/* ==============================
+   MOBILE - 480px
+============================== */
+
+@media (max-width: 480px) {
+    .ceo-page {
+        padding: 115px 12px 0;
+    }
+
+    .ceo-content {
+        width: 100%;
+        padding: 25px 18px;
+        border-radius: 10px;
+    }
+
+    .ceo-content h1 {
+        font-size: 21px;
+        margin-bottom: 20px;
+    }
+
+    .ceo-content-main {
+        gap: 20px;
+    }
+
+    .ceo-img {
+        order: -1;
+        width: 220px;
+    }
+
+    .ceo-img-info {
+        padding: 12px 8px;
+    }
+
+    .ceo-img-info h3 {
+        font-size: 17px;
+    }
+
+    .ceo-img-info p {
+        font-size: 12px;
+    }
+
+    .ceo-text {
+        order: 1;
+        gap: 18px;
+    }
+
+    .ceo-text p {
+        font-size: 14px;
+        line-height: 1.75;
+    }
+
+    /* FOOTER */
+
+    .ceo-footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 15px;
+        padding: 18px 10px;
+    }
+
+    .ceo-footer-left {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .ceo-footer-right {
+        justify-content: center;
+    }
+
+    .ceo-footer-socials {
+        gap: 13px;
+    }
+}
+
+
+/* ==============================
+   SMALL MOBILE - 360px
+============================== */
+
+@media (max-width: 360px) {
+    .ceo-page {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+
+    .ceo-content {
+        padding: 22px 14px;
+    }
+
+    .ceo-content h1 {
+        font-size: 19px;
+    }
+
+    .ceo-img {
+        width: 200px;
+    }
+
+    .ceo-text p {
+        font-size: 13px;
+    }
+
+    .ceo-footer {
+        font-size: 11px;
+    }
+}

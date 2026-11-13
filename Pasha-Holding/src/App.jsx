@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Icmal from './components/navbar_kecid/icmal.jsx';
+import Ceo from './components/navbar_kecid/Ceo.jsx';
 
 function AppContent() {
     const { pathname } = useLocation();
@@ -25,6 +26,7 @@ function AppContent() {
             <Routes>
                 <Route path="/" element={<Hero />} />
                 <Route path="/icmal" element={<Icmal />} />
+                <Route path="/ceo" element={<Ceo />} />
             </Routes>
         </>
     );

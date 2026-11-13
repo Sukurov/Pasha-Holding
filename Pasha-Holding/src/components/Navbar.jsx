@@ -107,7 +107,7 @@ function Navbar() {
                                 <a href="/icmal" onClick={closeMenus}>
                                     Paşa Qrup İcmalı
                                 </a>
-                                <a href="#">Direktorun Müraciəti</a>
+                                <a href="/ceo" onClick={closeMenus}>Direktorun Müraciəti</a>
                                 <a href="#">Dəyərlərimiz, Məqsədlərimiz, Baxışımız və Missiyamız</a>
                                 <a href="#">Liderlik DNT-miz</a>
                                 <a href="#">Təşkilati Struktur</a>
