@@ -1,0 +1,44 @@
+/* Mobil uyğunluq (Responsive dizayn) */
+@media (max-width: 992px) {
+    .offices-grid {
+        grid-template-columns: 1fr;
+        /* Planşet və kiçik ekranlarda ofislər alt-alta düşür */
+        gap: 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page {
+        padding: 120px 16px 60px;
+        /* Mobil ekranlarda yuxarı boşluq tənzimlənir */
+    }
+
+    .contact-title {
+        font-size: 32px;
+    }
+
+    .contact-description {
+        font-size: 15px;
+    }
+
+    .office-card,
+    .contact-form-card {
+        padding: 28px 20px;
+    }
+
+    .office-city {
+        font-size: 20px;
+    }
+
+    /* Mobil cihazlarda floating alert ekranın yuxarısına daha uyğun oturur */
+    .floating-alert {
+        min-width: 90%;
+        max-width: 90%;
+        font-size: 14px;
+        padding: 14px 18px;
+    }
+
+    .floating-alert.show {
+        top: 20px;
+    }
+}

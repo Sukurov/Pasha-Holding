@@ -81,7 +81,7 @@ function Navbar() {
                     <ul>
                         <li><a href="#">Xəbərlər</a></li>
                         <li><a href="#">Karyera</a></li>
-                        <li><a href="#">Əlaqə</a></li>
+                        <li><a href="/contacts" onClick={closeMenus}>Əlaqə</a></li>
                     </ul>
 
                     <div className="nav-top-right">

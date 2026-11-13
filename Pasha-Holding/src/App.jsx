@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Icmal from './components/navbar_kecid/icmal.jsx';
 import Ceo from './components/navbar_kecid/Ceo.jsx';
+import Contacts from './components/navbar_kecid/Contacts.jsx';
 
 function AppContent() {
     const { pathname } = useLocation();
@@ -27,6 +28,7 @@ function AppContent() {
                 <Route path="/" element={<Hero />} />
                 <Route path="/icmal" element={<Icmal />} />
                 <Route path="/ceo" element={<Ceo />} />
+                <Route path="/contacts" element={<Contacts />} />
             </Routes>
         </>
     );
