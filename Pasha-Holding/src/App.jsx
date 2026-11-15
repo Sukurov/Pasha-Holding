@@ -12,14 +12,21 @@ import Ceo from './components/navbar_kecid/Ceo.jsx';
 import Contacts from './components/navbar_kecid/Contacts.jsx';
 
 
-// Səhifələrə uyğun ümumi idarəetmə
+// Səhifələrin ümumi idarəetməsi
 function AppContent() {
     const { pathname } = useLocation();
 
-    // Aktiv səhifəyə uyğun body görünüşünü dəyişir
     useEffect(() => {
         const isHomePage = pathname === '/';
 
+        // Səhifə dəyişdikdə scroll-u ən yuxarı qaytarır
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant'
+        });
+
+        // Əsas səhifənin fon rəngini və scroll davranışını idarə edir
         document.body.style.background = isHomePage
             ? '#608AC4'
             : 'transparent';
@@ -28,7 +35,7 @@ function AppContent() {
             ? 'hidden'
             : 'auto';
 
-        // Komponent bağlananda əvvəlki stilləri təmizləyir
+        // Komponent bağlananda stilləri təmizləyir
         return () => {
             document.body.style.background = '';
             document.body.style.overflow = '';
