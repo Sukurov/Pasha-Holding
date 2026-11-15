@@ -23,43 +23,43 @@ export default function Hero() {
                 duration: 1.2
             })
 
-            // Açıqlama mətni
-            .from('.hero-text p', {
-                y: 35,
-                opacity: 0,
-                duration: 0.9
-            }, '-=0.6')
+                // Açıqlama mətni
+                .from('.hero-text p', {
+                    y: 35,
+                    opacity: 0,
+                    duration: 0.9
+                }, '-=0.6')
 
-            // Daha ətraflı
-            .from('.hero-text-hover', {
-                y: 25,
-                opacity: 0,
-                duration: 0.8
-            }, '-=0.5')
+                // Daha ətraflı
+                .from('.hero-text-hover', {
+                    y: 25,
+                    opacity: 0,
+                    duration: 0.8
+                }, '-=0.5')
 
-            // Bina şəkli
-            .from('.hero-img img', {
-                x: 120,
-                opacity: 0,
-                duration: 1.5,
-                ease: 'power2.out'
-            }, '-=1')
+                // Bina şəkli
+                .from('.hero-img img', {
+                    x: 120,
+                    opacity: 0,
+                    duration: 1.5,
+                    ease: 'power2.out'
+                }, '-=1')
 
-            // Footer
-            .from('.footer-main', {
-                y: 25,
-                opacity: 0,
-                duration: 0.8
-            }, '-=0.5')
+                // Footer
+                .from('.footer-main', {
+                    y: 25,
+                    opacity: 0,
+                    duration: 0.8
+                }, '-=0.5')
 
-            // Səhifə nöqtələri
-            .from('.page-dots button', {
-                scale: 0,
-                opacity: 0,
-                duration: 0.5,
-                stagger: 0.1,
-                ease: 'back.out(1.7)'
-            }, '-=0.4');
+                // Səhifə nöqtələri
+                .from('.page-dots button', {
+                    scale: 0,
+                    opacity: 0,
+                    duration: 0.5,
+                    stagger: 0.1,
+                    ease: 'back.out(1.7)'
+                }, '-=0.4');
 
         });
 

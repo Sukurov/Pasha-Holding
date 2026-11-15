@@ -1,273 +1,332 @@
-/* ================================
+
+/* =========================================
    LARGE TABLET - 1200px
-================================ */
+   Böyük planşet və kiçik noutbuk ekranları
+========================================= */
 
 @media (max-width: 1200px) {
 
+    /* Əsas məzmunun boşluqları */
     .icmal-content {
         gap: 75px;
         padding-top: 130px;
     }
 
+    /* Səhifə başlığı */
     .icmal-content h1 {
         font-size: 3.5rem;
     }
 
+    /* Ağ məlumat paneli */
     .icmal-box {
         width: 88%;
         padding: 45px;
     }
 
+    /* Statistik göstəricilər */
     .icmal-box-pul-vahid {
         width: 50%;
     }
 
+    /* Şirkət loqoları arasındakı məsafə */
     .icmal-box .pasha-box-main {
         gap: 25px;
     }
 
+    /* Logo bloklarının ölçüsü */
     .icmal-box .pasha-box-main .pasha-bank {
         padding: 45px 35px;
     }
 
+    /* Logo şəkillərinin ölçüsü */
     .icmal-box .pasha-box-main .pasha-bank img {
         width: 130px;
     }
 }
 
 
-/* ================================
+/* =========================================
    TABLET - 1024px
-================================ */
+   Planşet ekranları
+========================================= */
 
 @media (max-width: 1024px) {
 
+    /* Əsas məzmunun yerləşməsi */
     .icmal-content {
         gap: 65px;
         padding: 120px 0 45px;
     }
 
+    /* Səhifə başlığı */
     .icmal-content h1 {
         margin-top: 100px;
         font-size: 3rem;
         text-align: center;
     }
 
+    /* Ağ məlumat paneli */
     .icmal-box {
         width: 90%;
         padding: 40px 30px;
     }
 
+    /* İcmal mətnləri arasındakı məsafə */
     .icmal-box-top {
         gap: 25px;
     }
 
+    /* Əsas məlumat mətni */
     .icmal-box-top span {
         font-size: 1.15rem;
         line-height: 1.7;
     }
 
+    /* Əlavə məlumat mətni */
     .icmal-box-top p {
         font-size: 0.9rem;
         line-height: 1.7;
     }
 
+    /* Statistik bölmənin boşluqları */
     .icmal-box-pul-vahid-main {
         padding: 15px 0;
     }
 
+    /* Statistik göstəricilər */
     .icmal-box-pul-vahid {
         width: 50%;
         padding: 25px 10px;
     }
 
+    /* Statistik rəqəmlər */
     .icmal-box-pul-vahid span {
         font-size: 1.7rem;
     }
 
+    /* Statistik açıqlamalar */
     .icmal-box-pul-vahid p {
         font-size: 0.85rem;
     }
 
+    /* Şirkət loqoları arasındakı məsafə */
     .icmal-box .pasha-box-main {
         gap: 20px;
     }
 
+    /* Logo bloklarının ölçüsü */
     .icmal-box .pasha-box-main .pasha-bank {
         padding: 35px 25px;
     }
 
+    /* Logo şəkillərinin ölçüsü */
     .icmal-box .pasha-box-main .pasha-bank img {
         width: 115px;
         height: 45px;
     }
 
+    /* Footer boşluqları */
     .icmal-footer {
         padding: 15px 30px;
     }
 }
 
 
-/* ================================
+/* =========================================
    MOBILE - 768px
-================================ */
+   Kiçik planşet və böyük telefon ekranları
+========================================= */
 
 @media (max-width: 768px) {
 
+    /* Mobil cihazlarda fon şəklinin yerləşməsi */
     .icmal-page::before {
         background-size: cover;
         background-position: center;
     }
 
+    /* Əsas məzmunun yerləşməsi */
     .icmal-content {
         gap: 45px;
         padding: 110px 0 40px;
     }
 
+    /* Səhifə başlığı */
     .icmal-content h1 {
         margin-top: 80px;
         padding: 0 15px;
         font-size: 2.5rem;
     }
 
+    /* Ağ məlumat paneli */
     .icmal-box {
         width: 92%;
         padding: 35px 25px;
     }
 
+    /* İcmal mətnləri arasındakı məsafə */
     .icmal-box-top {
         gap: 22px;
     }
 
+    /* Əsas məlumat mətni */
     .icmal-box-top span {
         font-size: 1.05rem;
         line-height: 1.7;
     }
 
+    /* Əlavə məlumat mətni */
     .icmal-box-top p {
         font-size: 0.85rem;
         line-height: 1.7;
     }
 
+    /* Statistik bölmənin boşluqları */
     .icmal-box-pul-vahid-main {
         padding: 15px 0;
     }
 
+    /* Statistik göstəricilər */
     .icmal-box-pul-vahid {
         width: 50%;
         padding: 25px 8px;
     }
 
+    /* Statistik rəqəmlər */
     .icmal-box-pul-vahid span {
         font-size: 1.45rem;
     }
 
+    /* Statistik açıqlamalar */
     .icmal-box-pul-vahid p {
         font-size: 0.8rem;
         line-height: 1.5;
     }
 
+    /* Şirkət loqoları */
     .icmal-box .pasha-box-main {
         gap: 15px;
         padding-top: 30px;
     }
 
+    /* Logo blokları */
     .icmal-box .pasha-box-main .pasha-bank {
         padding: 25px 20px;
     }
 
+    /* Logo şəkilləri */
     .icmal-box .pasha-box-main .pasha-bank img {
         width: 100px;
         height: 40px;
     }
 
+    /* Footer-in yerləşməsi */
     .icmal-footer {
         gap: 20px;
         padding: 15px 25px;
         font-size: 11px;
     }
 
+    /* Footer-in sol hissəsi */
     .icmal-footer-left {
         gap: 15px;
     }
 
+    /* Sosial media ikonları arasındakı məsafə */
     .icmal-footer-socials {
         gap: 12px;
     }
 
+    /* Sosial media ikonlarının ölçüsü */
     .icmal-footer-socials a {
         font-size: 15px;
     }
 }
 
 
-/* ================================
+/* =========================================
    SMALL MOBILE - 480px
-================================ */
+   Kiçik telefon ekranları
+========================================= */
 
 @media (max-width: 480px) {
 
+    /* Əsas məzmunun boşluqları */
     .icmal-content {
         gap: 35px;
         padding: 90px 0 30px;
     }
 
+    /* Səhifə başlığı */
     .icmal-content h1 {
         margin-top: 75px;
         font-size: 2rem;
     }
 
+    /* Ağ məlumat paneli */
     .icmal-box {
         width: 94%;
         padding: 25px 18px;
     }
 
+    /* İcmal mətnləri arasındakı məsafə */
     .icmal-box-top {
         gap: 18px;
     }
 
+    /* Əsas məlumat mətni */
     .icmal-box-top span {
         font-size: 0.95rem;
         line-height: 1.65;
     }
 
+    /* Əlavə məlumat mətni */
     .icmal-box-top p {
         font-size: 0.8rem;
     }
 
+    /* Statistik bölmə */
     .icmal-box-pul-vahid-main {
         padding: 10px 0;
     }
 
+    /* Statistik göstəriciləri bir sütunda yerləşdirir */
     .icmal-box-pul-vahid {
         width: 100%;
         padding: 22px 5px;
+
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
 
+    /* Son statistik göstəricidə alt xətti silir */
     .icmal-box-pul-vahid:last-child {
         border-bottom: none;
     }
 
+    /* Statistik rəqəmlər */
     .icmal-box-pul-vahid span {
         font-size: 1.65rem;
     }
 
+    /* Statistik açıqlamalar */
     .icmal-box-pul-vahid p {
         font-size: 0.82rem;
     }
 
+    /* Şirkət loqoları */
     .icmal-box .pasha-box-main {
         gap: 12px;
         padding-top: 25px;
     }
 
+    /* Logo bloklarını iki sütunda yerləşdirir */
     .icmal-box .pasha-box-main .pasha-bank {
         width: calc(50% - 6px);
         min-height: 100px;
         padding: 20px 12px;
     }
 
+    /* Logo şəkilləri */
     .icmal-box .pasha-box-main .pasha-bank img {
         width: 100%;
         max-width: 120px;
@@ -275,6 +334,7 @@
         object-fit: contain;
     }
 
+    /* Footer elementlərini alt-alta yerləşdirir */
     .icmal-footer {
         flex-direction: column;
         justify-content: center;
@@ -282,48 +342,58 @@
         padding: 20px 15px;
     }
 
+    /* Footer-in sol hissəsi */
     .icmal-footer-left {
         justify-content: center;
         gap: 18px;
     }
 
+    /* Footer-in sağ hissəsi */
     .icmal-footer-right {
         justify-content: center;
     }
 
+    /* Sosial media ikonları */
     .icmal-footer-socials {
         gap: 15px;
     }
 }
 
 
-/* ================================
+/* =========================================
    EXTRA SMALL MOBILE - 360px
-================================ */
+   Çox kiçik telefon ekranları
+========================================= */
 
 @media (max-width: 360px) {
 
+    /* Səhifə başlığı */
     .icmal-content h1 {
         font-size: 1.75rem;
     }
 
+    /* Ağ məlumat paneli */
     .icmal-box {
         padding: 22px 14px;
     }
 
+    /* Əsas məlumat mətni */
     .icmal-box-top span {
         font-size: 0.9rem;
     }
 
+    /* Statistik rəqəmlər */
     .icmal-box-pul-vahid span {
         font-size: 1.45rem;
     }
 
+    /* Logo blokları */
     .icmal-box .pasha-box-main .pasha-bank {
         min-height: 85px;
         padding: 15px 8px;
     }
 
+    /* Footer-in sol hissəsi */
     .icmal-footer-left {
         gap: 12px;
         font-size: 10px;

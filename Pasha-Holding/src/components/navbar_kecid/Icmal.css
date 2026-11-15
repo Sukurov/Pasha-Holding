@@ -1,67 +1,111 @@
-/* Əsas səhifə */
+
+/* =========================================
+   ƏSAS SƏHİFƏ
+   İcmal səhifəsinin ümumi quruluşu
+========================================= */
 
 .icmal-page {
     position: relative;
+
+    /* Fon şəklinin böyümə dəyəri GSAP tərəfindən dəyişdirilir */
     --bg-scale: 1;
 }
 
-/* Əsas fon şəkli */
+
+/* =========================================
+   ƏSAS FON ŞƏKLİ
+   Səhifənin arxa fonunda görünən şəkil
+========================================= */
 
 .icmal-page::before {
     content: "";
+
     position: fixed;
     inset: 0;
     z-index: 0;
+
+    /* Fon şəkli */
     background-image: url('/images/qrup_icmali.png');
     background-size: 100% 100%;
     background-position: center;
     background-repeat: no-repeat;
+
+    /* Fon şəklinin rəng və kontrast tənzimləməsi */
     filter: brightness(0.8) contrast(1.1);
+
+    /* Scroll zamanı fonun böyüməsi */
     transform: scale(var(--bg-scale));
     transform-origin: center;
+
     will-change: auto;
+
+    /* Fon şəklinin kliklərə mane olmasının qarşısını alır */
     pointer-events: none;
 }
 
-/* Məzmunun yerləşməsi */
+
+/* =========================================
+   MƏZMUNUN YERLƏŞMƏSİ
+   Başlıq və məlumat panelinin düzülüşü
+========================================= */
 
 .icmal-content {
     position: relative;
     z-index: 1;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     min-height: 100vh;
     gap: 100px;
+
     padding: 150px 0 50px;
 }
 
-/* Başlıq */
+
+/* =========================================
+   BAŞLIQ
+   Paşa Qrup İcmalı başlığı
+========================================= */
 
 .icmal-content h1 {
     margin-top: 120px;
+
     color: #00845A;
+
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 4rem;
     font-weight: 600;
 }
 
-/* Ağ mətn qutusu */
+
+/* =========================================
+   AĞ MƏTN QUTUSU
+   İcmal məlumatlarının yerləşdiyi panel
+========================================= */
 
 .icmal-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     width: 80%;
     min-height: 300px;
+
     padding: 60px;
+
     border-radius: 5px;
     background: white;
 }
 
-/* İcmal məlumatları */
+
+/* =========================================
+   İCMAL MƏLUMATLARI
+   Holdinq haqqında mətnlər
+========================================= */
 
 .icmal-box-top {
     display: flex;
@@ -69,100 +113,144 @@
     gap: 40px;
 }
 
+/* Əsas məlumat mətni */
 .icmal-box-top span {
     font-size: 1.3rem;
 }
 
+/* Əlavə məlumat mətnləri */
 .icmal-box-top p {
     color: rgba(0, 0, 0, 0.524);
     font-size: 0.9rem;
 }
 
-/* Pul vahidləri bölməsi */
+
+/* =========================================
+   STATİSTİK GÖSTƏRİCİLƏR
+   Maliyyə və digər statistik məlumatlar
+========================================= */
 
 .icmal-box-pul-vahid-main {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
     width: 100%;
+
     padding: 20px;
+
+    /* Statistik bölmənin aşağı sərhədi */
     border-bottom: 1px solid rgba(0, 0, 0, 0.263);
 }
 
+/* Hər statistik göstəricinin ayrıca bloku */
 .icmal-box-pul-vahid {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     width: 45%;
+
     padding: 30px 0;
+
+    /* GSAP animasiyaları üçün optimallaşdırma */
     will-change: transform, opacity;
+
     text-align: center;
 }
 
+/* Statistik rəqəmlər */
 .icmal-box-pul-vahid span {
     font-family: Georgia, 'Times New Roman', serif;
     font-size: 2rem;
 }
 
+/* Statistik məlumatların açıqlaması */
 .icmal-box-pul-vahid p {
     font-size: 0.9rem;
     max-width: 350px;
 }
 
+
+/* =========================================
+   PAŞA QRUP ŞİRKƏTLƏRİNİN LOQOLARI
+========================================= */
+
+/* Loqoların ümumi yerləşməsi */
 .icmal-box .pasha-box-main {
-    padding-top: 40px;
     display: flex;
-    gap: 40px;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+
+    gap: 40px;
+    padding-top: 40px;
 }
 
+/* Hər şirkətin logo bloku */
 .icmal-box .pasha-box-main .pasha-bank {
-    padding: 60px 50px;
-    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    padding: 60px 50px;
+
     border: 1px solid #5453538e;
+
+    cursor: pointer;
+
+    /* GSAP animasiyaları üçün optimallaşdırma */
     will-change: transform, opacity;
 }
 
+/* Şirkət loqolarının ilkin görünüşü */
 .icmal-box .pasha-box-main .pasha-bank img {
     width: 150px;
     height: 50px;
-    scale: 1;
+
+    transform: scale(1);
     opacity: 0.4;
+
     transition: 0.2s;
 }
 
+/* Kursor loqonun üzərinə gəldikdə */
 .icmal-box .pasha-box-main .pasha-bank:hover img {
     opacity: 1;
-    transition: 0.2s;
     object-fit: contain;
 }
 
+/* Kursor logo blokunun üzərinə gəldikdə */
 .icmal-box .pasha-box-main .pasha-bank:hover {
     border: 1px solid #54535326;
 }
 
-/* Footer */
+
+/* =========================================
+   FOOTER
+   İcmal səhifəsinin aşağı hissəsi
+========================================= */
 
 .icmal-footer {
     position: relative;
     z-index: 2;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     width: 100%;
     min-height: 60px;
+
     padding: 12px 50px;
+
     color: #00845A;
     font-size: 12px;
 }
 
+/* Footer elementlərinin ümumi düzülüşü */
 .icmal-footer-left,
 .icmal-footer-right,
 .icmal-footer-socials {
@@ -170,26 +258,31 @@
     align-items: center;
 }
 
+/* Footer-in sol hissəsindəki elementlər */
 .icmal-footer-left {
     gap: 30px;
 }
 
+/* Footer daxilindəki linklər */
 .icmal-footer a {
     color: #00845A;
     text-decoration: none;
+
     transition: 0.3s;
 }
 
+/* Sosial media ikonlarının aralığı */
 .icmal-footer-socials {
     gap: 15px;
 }
 
+/* Sosial media ikonları */
 .icmal-footer-socials a {
     color: #00845A;
     font-size: 17px;
-    transition: 0.3s;
 }
 
+/* Sosial media ikonlarının hover effekti */
 .icmal-footer-socials a:hover {
     opacity: 0.7;
 }

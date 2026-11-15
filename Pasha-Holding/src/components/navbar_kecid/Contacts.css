@@ -1,356 +1,473 @@
+
+/* =========================================
+   ƏSAS ƏLAQƏ SƏHİFƏSİ
+========================================= */
+
 .contact-page {
-    width: 100%;
-    min-height: 100vh;
-    padding: 220px 24px 80px;
-    background-color: #eef2f6;
     display: flex;
     justify-content: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 220px 24px 80px;
+
+    background-color: #eef2f6;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+        Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+
     box-sizing: border-box;
 }
 
+
+/* =========================================
+   ƏSAS MƏZMUN KONTEYNERİ
+========================================= */
+
 .contact-container {
-    width: 100%;
-    max-width: 1100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
+    max-width: 1100px;
 }
 
-/* Başlıq hissəsi */
+
+/* =========================================
+   BAŞLIQ HİSSƏSİ
+========================================= */
+
 .contact-header {
-    text-align: center;
     margin-bottom: 56px;
+    text-align: center;
 }
 
+/* Kiçik başlıq */
 .contact-subtitle {
     display: inline-block;
+
+    margin-bottom: 12px;
+
+    color: #0d6e6e;
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: #0d6e6e;
-    margin-bottom: 12px;
 }
 
+/* Əsas başlıq */
 .contact-title {
+    margin: 0 0 16px;
+
+    color: #0f172a;
     font-size: 40px;
     font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 16px 0;
 }
 
+/* Başlığın açıqlaması */
 .contact-description {
-    font-size: 16px;
-    color: #475569;
     max-width: 540px;
     margin: 0 auto;
+
+    color: #475569;
+    font-size: 16px;
     line-height: 1.6;
 }
 
-/* Ofis kartları */
+
+/* =========================================
+   OFİS KARTLARI
+========================================= */
+
 .offices-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+
     gap: 32px;
+
     width: 100%;
     margin-bottom: 48px;
 }
 
+/* Hər bir ofis kartı */
 .office-card {
-    background: #ffffff;
-    border-radius: 16px;
-    padding: 40px;
-    border: 1px solid #cbd5e1;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
     display: flex;
     flex-direction: column;
+
+    padding: 40px;
+
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.08),
+        0 2px 6px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
 }
 
+/* Kartın üzərinə gəldikdə */
 .office-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12), 0 4px 10px rgba(15, 23, 42, 0.06);
+
     border-color: #94a3b8;
+
+    box-shadow:
+        0 16px 40px rgba(15, 23, 42, 0.12),
+        0 4px 10px rgba(15, 23, 42, 0.06);
 }
 
+
+/* =========================================
+   OFİS KARTININ BAŞLIQ HİSSƏSİ
+========================================= */
+
+/* Ofis növünü göstərən nişan */
 .office-badge {
     align-self: flex-start;
+
+    margin-bottom: 20px;
+    padding: 6px 14px;
+
     background-color: #e6f4f4;
+    border-radius: 20px;
+
     color: #0d6e6e;
     font-size: 12px;
     font-weight: 600;
-    padding: 6px 14px;
-    border-radius: 20px;
-    margin-bottom: 20px;
 }
 
+/* Şəhərin adı */
 .office-city {
+    margin: 0 0 6px;
+
+    color: #0f172a;
     font-size: 24px;
     font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 6px 0;
 }
 
+/* Şirkətin adı */
 .office-company {
+    margin: 0 0 28px;
+    padding-bottom: 20px;
+
+    color: #64748b;
     font-size: 15px;
     font-weight: 500;
-    color: #64748b;
-    margin: 0 0 28px 0;
-    padding-bottom: 20px;
+
     border-bottom: 1px solid #e2e8f0;
 }
+
+
+/* =========================================
+   OFİS ƏLAQƏ MƏLUMATLARI
+========================================= */
 
 .office-details {
     display: flex;
     flex-direction: column;
+
     gap: 16px;
 }
 
+/* Hər məlumatın ayrıca bloku */
 .detail-item {
     display: flex;
     flex-direction: column;
+
     gap: 4px;
 }
 
+/* Məlumatın adı */
 .detail-label {
+    color: #94a3b8;
+
     font-size: 12px;
     font-weight: 600;
-    text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: #94a3b8;
+    text-transform: uppercase;
 }
 
+/* Ünvan və digər məlumatlar */
 .detail-text,
 .detail-link {
-    font-size: 15px;
     color: #334155;
+
+    font-size: 15px;
     line-height: 1.5;
+
     text-decoration: none;
 }
 
+/* Telefon və e-poçt linkləri */
 .detail-link {
     color: #0d6e6e;
     font-weight: 500;
+
     transition: color 0.2s ease;
 }
 
+/* Linklərin üzərinə gəldikdə */
 .detail-link:hover {
     color: #094d4d;
     text-decoration: underline;
 }
 
-/* Əlaqə Formu Kartı */
+
+/* =========================================
+   ƏLAQƏ FORMU KARTI
+========================================= */
+
 .contact-form-card {
     width: 100%;
     max-width: 580px;
-    background: #ffffff;
-    border-radius: 16px;
+
     padding: 40px;
+
+    background: #ffffff;
     border: 1px solid #cbd5e1;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08), 0 2px 6px rgba(15, 23, 42, 0.04);
+    border-radius: 16px;
+
     box-sizing: border-box;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.08),
+        0 2px 6px rgba(15, 23, 42, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
+/* Form kartının hover effekti */
 .contact-form-card:hover {
-    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.12), 0 4px 10px rgba(15, 23, 42, 0.06);
+    box-shadow:
+        0 16px 40px rgba(15, 23, 42, 0.12),
+        0 4px 10px rgba(15, 23, 42, 0.06);
 }
 
+/* Formun başlığı */
 .form-title {
+    margin: 0 0 24px;
+
+    color: #0f172a;
     font-size: 24px;
     font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 24px 0;
+
     text-align: center;
 }
 
-/* Formun daxilində, başlığın üstündə çıxan bildiriş stili */
-.form-inline-alert {
-    width: 100%;
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    margin-bottom: 0;
-    border-radius: 10px;
-    font-size: 14px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-    opacity: 0;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid transparent;
-}
 
-/* Bildiriş aktivləşdikdə işə düşür */
-/* Ekranın yuxarısından aşağıya doğru sürüşən Fixed Alert (Navbar-ın altında heç vaxt qalmaz) */
+/* =========================================
+   BİLDİRİŞ PƏNCƏRƏSİ
+   Uğurlu və xətalı mesajlar
+========================================= */
+
 .floating-alert {
     position: fixed;
     top: -100px;
-    /* Başlanğıcda ekranın xaricində gizlənir */
     left: 50%;
-    transform: translateX(-50%);
     z-index: 99999;
-    /* Həmişə hər şeyin (navbar-ın da) üzərində olur */
-    min-width: 320px;
-    max-width: 500px;
-    padding: 16px 24px;
-    border-radius: 12px;
-    font-size: 15px;
-    font-weight: 500;
+
     display: flex;
     align-items: center;
-    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
-    box-sizing: border-box;
-    opacity: 0;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    /* Yumşaq bounce effekti */
+
+    min-width: 320px;
+    max-width: min(500px, calc(100% - 32px));
+
+    padding: 16px 24px;
+
+    background-color: #ffffff;
     border: 1px solid transparent;
+    border-radius: 12px;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.15);
+
+    font-size: 15px;
+    font-weight: 500;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+
+    transform: translateX(-50%);
+
+    transition:
+        top 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
+        opacity 0.3s ease;
 }
 
-/* Aktivləşəndə yuxarıdan aşağı sürüşüb yerləşir */
+/* Bildiriş aktiv olduqda */
 .floating-alert.show {
     top: 30px;
-    /* Navbar-dan aşağıda, ekranın yuxarı mərkəzində dayanır */
     opacity: 1;
 }
 
-/* Uğurlu olduqda Yaşıl */
+/* Uğurlu əməliyyat bildirişi */
 .floating-alert.success {
     background-color: #ecfdf5;
     color: #065f46;
     border-color: #10b981;
 }
 
-/* Xəta olduqda Qırmızı */
+/* Xəta bildirişi */
 .floating-alert.error {
     background-color: #fef2f2;
     color: #991b1b;
     border-color: #ef4444;
 }
 
+
+/* =========================================
+   FORMUN DAXİLİ
+========================================= */
+
+/* Form elementlərinin düzülüşü */
 .contact-form {
     display: flex;
     flex-direction: column;
+
     gap: 20px;
 }
 
+/* Hər input üçün ayrıca blok */
 .form-group {
     display: flex;
     flex-direction: column;
+
     gap: 8px;
 }
 
+/* Input başlıqları */
 .form-label {
+    color: #334155;
+
     font-size: 14px;
     font-weight: 600;
-    color: #334155;
 }
 
+/* Input və textarea sahələri */
 .form-input,
 .form-textarea {
     width: 100%;
+
     padding: 14px 16px;
-    font-size: 15px;
-    color: #0f172a;
+
     background-color: #f8fafc;
     border: 1px solid #cbd5e1;
     border-radius: 10px;
+
+    color: #0f172a;
     font-family: inherit;
-    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    font-size: 15px;
+
     box-sizing: border-box;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background-color 0.2s ease;
 }
 
+/* Mesaj sahəsi */
 .form-textarea {
-    resize: vertical;
     min-height: 110px;
+    resize: vertical;
 }
 
+/* Input aktiv olduqda */
 .form-input:focus,
 .form-textarea:focus {
     outline: none;
+
     background-color: #ffffff;
     border-color: #0d6e6e;
+
     box-shadow: 0 0 0 3px rgba(13, 110, 110, 0.15);
 }
 
-/* Düymə */
+
+/* =========================================
+   GÖNDƏR DÜYMƏSİ
+========================================= */
+
 .contact-btn {
     width: 100%;
+
+    margin-top: 4px;
+    padding: 16px;
+
     background-color: #0d6e6e;
+    border: none;
+    border-radius: 10px;
+
     color: #ffffff;
     font-size: 16px;
     font-weight: 600;
-    padding: 16px;
-    border: none;
-    border-radius: 10px;
+
     cursor: pointer;
-    margin-top: 4px;
-    transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+
     box-shadow: 0 4px 14px rgba(13, 110, 110, 0.25);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease,
+        box-shadow 0.2s ease;
 }
 
-.contact-btn:hover {
+/* Düymənin üzərinə gəldikdə */
+.contact-btn:hover:not(:disabled) {
     background-color: #095252;
+
     transform: translateY(-2px);
+
     box-shadow: 0 6px 20px rgba(13, 110, 110, 0.35);
 }
 
-.contact-btn:active {
+/* Düyməyə klik etdikdə */
+.contact-btn:active:not(:disabled) {
     transform: translateY(0);
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-8px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Göndərilmə zamanı düymə */
+.contact-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
-/* Mobil uyğunluq */
-@media (max-width: 768px) {
-    .contact-page {
-        padding: 130px 16px 60px;
-    }
 
-    .contact-title {
-        font-size: 32px;
-    }
+/* =========================================
+   FOOTER
+========================================= */
 
-    .offices-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    }
-
-    .office-card,
-    .contact-form-card {
-        padding: 28px 20px;
-    }
-}
-
-/* FOOTER */
 .ceo-footer {
     position: relative;
     z-index: 2;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     width: 100%;
     min-height: 60px;
+
     margin-top: auto;
     padding: 12px 50px;
+
+    background-color: transparent;
+
     color: #00845A;
     font-size: 12px;
+
     box-sizing: border-box;
-    background-color: transparent;
-    /* Əgər fon rəngi lazımdırsa burdan dəyişə bilərsən */
 }
 
+/* Footer hissələrinin ümumi düzülüşü */
 .ceo-footer-left,
 .ceo-footer-right,
 .ceo-footer-socials {
@@ -358,45 +475,186 @@
     align-items: center;
 }
 
+/* Footer-in sol hissəsi */
 .ceo-footer-left {
     gap: 30px;
 }
 
+/* Footer linkləri */
 .ceo-footer a {
     color: #00845A;
     text-decoration: none;
+
     transition: 0.3s;
 }
 
+/* Footer linklərinin hover effekti */
 .ceo-footer a:hover {
     opacity: 0.8;
 }
 
+/* Sosial media ikonları arasındakı məsafə */
 .ceo-footer-socials {
     gap: 15px;
 }
 
+/* Sosial media ikonları */
 .ceo-footer-socials a {
     color: #00845A;
     font-size: 17px;
+
     transition: 0.3s;
 }
 
+/* Sosial media ikonlarının hover effekti */
 .ceo-footer-socials a:hover {
     opacity: 0.7;
 }
 
-/* Mobil uyğunluq (Responsive) */
+
+/* =========================================
+   RESPONSIVE - 768px
+   Planşet və mobil cihazlar
+========================================= */
+
 @media (max-width: 768px) {
+
+    /* Əlaqə səhifəsinin boşluqları */
+    .contact-page {
+        padding: 130px 16px 60px;
+    }
+
+    /* Başlığın ölçüsü */
+    .contact-title {
+        font-size: 32px;
+    }
+
+    /* Ofis kartları bir sütunda yerləşir */
+    .offices-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    /* Kartların daxili boşluqları */
+    .office-card,
+    .contact-form-card {
+        padding: 28px 20px;
+    }
+
+    /* Footer elementləri alt-alta düzülür */
     .ceo-footer {
         flex-direction: column;
+
         gap: 15px;
         padding: 20px 16px;
+
         text-align: center;
     }
 
+    /* Footer-in sol hissəsi */
     .ceo-footer-left {
         flex-direction: column;
         gap: 8px;
     }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - 480px
+   Kiçik telefon ekranları
+========================================= */
+
+@media (max-width: 480px) {
+
+    /* Əlaqə səhifəsinin yuxarı boşluğu */
+    .contact-page {
+        padding: 110px 14px 45px;
+    }
+
+    /* Başlıq hissəsinin alt boşluğu */
+    .contact-header {
+        margin-bottom: 35px;
+    }
+
+    /* Əsas başlıq */
+    .contact-title {
+        font-size: 28px;
+    }
+
+    /* Başlıq açıqlaması */
+    .contact-description {
+        font-size: 14px;
+    }
+
+    /* Ofis kartları */
+    .office-card,
+    .contact-form-card {
+        padding: 24px 18px;
+    }
+
+    /* Şəhər adı */
+    .office-city {
+        font-size: 21px;
+    }
+
+    /* Ünvan və əlaqə məlumatları */
+    .detail-text,
+    .detail-link {
+        font-size: 14px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Bildiriş pəncərəsi */
+    .floating-alert {
+        min-width: 0;
+        width: calc(100% - 28px);
+        padding: 14px 18px;
+        font-size: 14px;
+    }
+
+    /* Bildirişin ekrandakı mövqeyi */
+    .floating-alert.show {
+        top: 20px;
+    }
+
+}
+
+
+/* =========================================
+   RESPONSIVE - 360px
+   Çox kiçik telefon ekranları
+========================================= */
+
+@media (max-width: 360px) {
+
+    /* Başlığın ölçüsü */
+    .contact-title {
+        font-size: 25px;
+    }
+
+    /* Kartların daxili boşluqları */
+    .office-card,
+    .contact-form-card {
+        padding: 20px 15px;
+    }
+
+    /* Form başlığı */
+    .form-title {
+        font-size: 21px;
+    }
+
+    /* Input sahələri */
+    .form-input,
+    .form-textarea {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    /* Göndər düyməsi */
+    .contact-btn {
+        padding: 14px;
+        font-size: 15px;
+    }
+
 }

@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react';
+
+import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 
 import Navbar from './components/Navbar';
@@ -10,20 +11,22 @@ import Contacts from './components/navbar_kecid/Contacts.jsx';
 function AppContent() {
     const { pathname } = useLocation();
 
-    // Səhifəyə uyğun body fon rəngini dəyişir
     useEffect(() => {
-        document.body.style.background =
-            pathname === '/' ? '#608AC4' : 'transparent';
+        const isHomePage = pathname === '/';
 
-        document.body.style.overflow =
-            pathname === '/' ? 'hidden' : 'auto';
+        document.body.style.background = isHomePage ? '#608AC4' : 'transparent';
+        document.body.style.overflow = isHomePage ? 'hidden' : 'auto';
+
+        return () => {
+            document.body.style.background = '';
+            document.body.style.overflow = '';
+        };
     }, [pathname]);
 
     return (
         <>
             <Navbar />
 
-            {/* Səhifələrin idarə olunması */}
             <Routes>
                 <Route path="/" element={<Hero />} />
                 <Route path="/icmal" element={<Icmal />} />

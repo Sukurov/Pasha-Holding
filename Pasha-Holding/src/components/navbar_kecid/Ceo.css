@@ -1,3 +1,8 @@
+
+/* =====================================
+   CEO SƏHİFƏSİ
+===================================== */
+
 .ceo-page {
     width: 100%;
     min-height: 100vh;
@@ -8,6 +13,11 @@
     background: #f4f6f5;
 }
 
+
+/* =====================================
+   ƏSAS MƏZMUN
+===================================== */
+
 .ceo-content {
     width: 90%;
     padding: 45px 50px;
@@ -17,6 +27,7 @@
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.16);
 }
 
+/* Səhifənin başlığı */
 .ceo-content h1 {
     margin-bottom: 35px;
     color: #00845A;
@@ -24,12 +35,18 @@
     font-weight: 600;
 }
 
+
+/* =====================================
+   DİREKTORUN MÜRACİƏTİ
+===================================== */
+
 .ceo-content-main {
     display: flex;
     align-items: flex-start;
     gap: 45px;
 }
 
+/* Mətn hissəsi */
 .ceo-text {
     flex: 1;
     display: flex;
@@ -45,6 +62,11 @@
     font-weight: 400;
 }
 
+
+/* =====================================
+   DİREKTORUN ŞƏKLİ
+===================================== */
+
 .ceo-img {
     flex: 0 0 280px;
     overflow: hidden;
@@ -58,16 +80,17 @@
     object-fit: cover;
 }
 
+/* Şəklin altındakı məlumatlar */
 .ceo-img-info {
     padding: 18px 10px;
     text-align: center;
 }
 
 .ceo-img-info h3 {
+    margin-bottom: 6px;
     color: #00845A;
     font-size: 19px;
     font-weight: 600;
-    margin-bottom: 6px;
 }
 
 .ceo-img-info p {
@@ -76,7 +99,10 @@
     font-weight: 400;
 }
 
-/* FOOTER */
+
+/* =====================================
+   FOOTER
+===================================== */
 
 .ceo-footer {
     position: relative;
@@ -92,6 +118,7 @@
     font-size: 12px;
 }
 
+/* Footer elementlərinin düzülüşü */
 .ceo-footer-left,
 .ceo-footer-right,
 .ceo-footer-socials {
@@ -103,12 +130,14 @@
     gap: 30px;
 }
 
+/* Footer keçidləri */
 .ceo-footer a {
     color: #00845A;
     text-decoration: none;
     transition: 0.3s;
 }
 
+/* Sosial şəbəkə ikonları */
 .ceo-footer-socials {
     gap: 15px;
 }
@@ -119,6 +148,7 @@
     transition: 0.3s;
 }
 
+/* İkonların üzərinə gəldikdə */
 .ceo-footer-socials a:hover {
     opacity: 0.7;
 }

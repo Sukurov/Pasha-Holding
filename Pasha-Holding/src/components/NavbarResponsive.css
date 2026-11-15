@@ -1,40 +1,56 @@
 
-/* SMALL DESKTOP - 1200px */
+/* =========================================
+   SMALL DESKTOP - 1200px
+   Kiçik masaüstü ekranlar
+========================================= */
 
 @media (max-width: 1200px) {
+
+    /* Navbar aralıqları və daxili boşluqlar */
     .main-nav {
         gap: 25px;
         padding: 25px 30px;
     }
 
+    /* Logo ölçüsü */
     .logo img {
         width: 150px;
     }
 
+    /* Aşağı menyudakı elementlərin aralığı */
     .nav-bottom > ul {
         gap: 15px;
     }
 
+    /* Menyu yazılarının ölçüsü */
     .nav-top a,
     .dropdown-toggle {
         font-size: 0.82rem;
     }
 
+    /* Dil və axtarış hissəsi */
     .nav-right {
         gap: 15px;
         padding: 10px;
     }
 }
 
-/* TABLET - 1024px */
+
+/* =========================================
+   TABLET - 1024px
+   Planşet və kiçik ekranlar
+========================================= */
 
 @media (max-width: 1024px) {
+
+    /* Navbar elementlərinin yeni sətirə keçməsinə icazə verir */
     .main-nav {
         flex-wrap: wrap;
         gap: 20px;
         padding: 22px 25px;
     }
 
+    /* Logo ölçüsü */
     .logo img {
         width: 145px;
     }
@@ -49,48 +65,56 @@
         margin-left: auto;
     }
 
-    /* Sağ tərəfdəki ikonlar */
+    /* Sağ tərəfdəki ikonların yerləşməsi */
     .nav-right {
         margin-left: 0;
         padding: 0;
     }
 
-    /* Açılan mobil menyu */
+    /* Mobil menyunun əsas görünüşü */
     .nav-top-bottom {
         position: fixed;
         top: 0;
         left: 0;
         z-index: 1001;
+
         display: flex;
         flex-direction: column;
+
         width: 100%;
         height: 100vh;
         height: 100dvh;
-        max-height: none;
+
         padding: 110px 30px 35px;
+
         overflow-y: auto;
         overflow-x: hidden;
+
         background: #608AC4;
+
+        /* Menyu bağlı olduqda gizlədilir */
         opacity: 0;
         visibility: hidden;
         transform: translateX(100%);
+
         transition:
             transform 0.4s ease,
             opacity 0.4s ease,
             visibility 0.4s ease;
     }
 
+    /* Mobil menyu açıldıqda */
     .nav-top-bottom.menu-open {
-        max-height: none;
         padding: 110px 30px 35px;
         overflow-y: auto;
         overflow-x: hidden;
+
         opacity: 1;
         visibility: visible;
         transform: translateX(0);
     }
 
-    /* Yuxarı menyu */
+    /* Yuxarı menyunun şaquli düzülüşü */
     .nav-top {
         align-items: flex-start;
         flex-direction: column;
@@ -99,42 +123,50 @@
         margin-bottom: 25px;
     }
 
+    /* Yuxarı menyudakı linklər */
     .nav-top ul {
         flex-wrap: wrap;
         gap: 15px 20px;
     }
 
-    /* Aşağı menyu */
+    /* Aşağı menyunun şaquli düzülüşü */
     .nav-bottom > ul {
         align-items: stretch;
         flex-direction: column;
         gap: 0;
     }
 
+    /* Hər menyu bölməsinin görünüşü */
     .dropdown-parent {
         padding: 14px 0;
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
+    /* Dropdown düyməsi */
     .dropdown-toggle {
         width: 100%;
         text-align: left;
         font-size: 16px;
     }
 
-    /* Mobil dropdown menyular */
+    /* Mobil dropdown menyunun ilkin vəziyyəti */
     .dropdown {
         position: static;
         width: 100% !important;
+
         max-height: 0;
         padding: 0;
         margin-top: 0;
+
         overflow: hidden;
+
         border-radius: 8px;
         background: rgba(255, 255, 255, 0.12);
+
         opacity: 0;
         visibility: hidden;
         transform: none;
+
         transition:
             max-height 0.3s ease,
             opacity 0.3s ease,
@@ -142,20 +174,23 @@
             visibility 0.3s ease;
     }
 
+    /* Mobil ekranda hover dropdown-u açmır */
     .dropdown-parent:hover .dropdown {
         opacity: 0;
         visibility: hidden;
     }
 
+    /* Dropdown yalnız kliklə açıldıqda görünür */
     .dropdown-parent.dropdown-open .dropdown {
         max-height: 500px;
         padding: 8px 0;
         margin-top: 12px;
+
         opacity: 1;
         visibility: visible;
     }
 
-    /* Dropdown linkləri */
+    /* Dropdown daxilindəki linklər */
     .dropdown a {
         display: block;
         padding: 11px 15px;
@@ -163,17 +198,19 @@
         font-size: 14px;
     }
 
+    /* Dropdown linkinə toxunduqda */
     .dropdown a:hover {
         padding-left: 22px;
         background: rgba(255, 255, 255, 0.12);
     }
 
-    /* İcmal səhifəsinin mobil menyusu */
+    /* Daxili səhifələrdə mobil menyunun ağ fonu */
     .main-nav.inner-page .nav-top-bottom,
     .main-nav.inner-page .nav-top-bottom.menu-open {
         background: white;
     }
 
+    /* Daxili səhifələrdə menyu yazılarının yaşıl rəngi */
     .main-nav.inner-page .nav-top a,
     .main-nav.inner-page .dropdown-toggle,
     .main-nav.inner-page .nav-top-right a,
@@ -181,147 +218,195 @@
         color: #00845A;
     }
 
+    /* Daxili səhifələrdə açılmış dropdown-un fonu */
     .main-nav.inner-page .dropdown-parent.dropdown-open .dropdown {
         background: rgba(0, 132, 90, 0.08);
     }
 }
 
-/* MOBILE - 617px */
+
+/* =========================================
+   MOBILE - 617px
+   Telefon ekranları
+========================================= */
 
 @media (max-width: 617px) {
+
+    /* Navbar ölçüləri */
     .main-nav {
         gap: 12px;
         padding: 18px 15px;
     }
 
+    /* Logo ölçüsü */
     .logo img {
         width: 125px;
     }
 
+    /* Sağ tərəfdəki ikonların aralığı */
     .nav-right {
         gap: 12px;
     }
 
+    /* Dil seçimi */
     .language span {
         width: 32px;
         height: 28px;
         font-size: 12px;
     }
 
+    /* Axtarış ikonu */
     .search-icon {
         font-size: 19px;
     }
 
+    /* Mobil menyu düyməsi */
     .menu-toggle {
         font-size: 25px;
     }
 
-    /* Açılan menyunun boşluqları */
+    /* Açılan menyunun daxili boşluqları */
     .nav-top-bottom,
     .nav-top-bottom.menu-open {
         padding: 100px 20px 30px;
     }
 
-    /* Yuxarı menyu */
+    /* Yuxarı menyunun element aralığı */
     .nav-top {
         gap: 15px;
     }
 
+    /* Yuxarı menyudakı linklərin aralığı */
     .nav-top ul {
         flex-wrap: wrap;
         gap: 15px;
     }
 
+    /* Dil və ikon hissəsinin sərhədini ləğv edir */
     .nav-top-right {
         padding: 0;
         border-left: none;
     }
 
+    /* Yuxarı menyudakı ikonlar */
     .nav-top-right .icon {
         font-size: 1.6rem;
     }
 
+    /* Yuxarı menyu yazıları */
     .nav-top a {
         font-size: 0.85rem;
     }
 
-    /* Dropdown menyular */
+    /* Dropdown düymələri */
     .dropdown-toggle {
         font-size: 0.9rem;
     }
 
+    /* Dropdown linkləri */
     .dropdown a {
         font-size: 13px;
     }
 }
 
-/* EXTRA SMALL MOBILE - 380px */
+
+/* =========================================
+   EXTRA SMALL MOBILE - 380px
+   Çox kiçik telefon ekranları
+========================================= */
 
 @media (max-width: 380px) {
+
+    /* Navbar boşluqları */
     .main-nav {
         padding: 15px 10px;
     }
 
+    /* Logo ölçüsü */
     .logo img {
         width: 110px;
     }
 
+    /* İkonlar arasındakı məsafə */
     .nav-right {
         gap: 8px;
     }
 
+    /* Menyu düyməsinin ölçüsü */
     .menu-toggle {
         font-size: 23px;
     }
 
+    /* Axtarış ikonu */
     .search-icon {
         font-size: 17px;
     }
 
+    /* Açılan menyunun daxili boşluqları */
     .nav-top-bottom,
     .nav-top-bottom.menu-open {
         padding: 90px 20px 25px;
     }
 }
 
-/* MOBİL MENYU LOQOSU */
 
+/* =========================================
+   MOBİL MENYU LOQOSU
+   Açılan menyunun yuxarı hissəsində görünür
+========================================= */
+
+/* Mobil logo normal vəziyyətdə gizlidir */
 .mobile-menu-logo {
     display: none !important;
 }
 
+
+/* Mobil ekranlarda logo görünüşü */
 @media (max-width: 1024px) {
+
+    /* Açılmış menyunun mövqeyi */
     .main-nav .nav-top-bottom.menu-open {
         position: fixed;
     }
 
+    /* Mobil menyu loqosunun yerləşməsi */
     .main-nav .nav-top-bottom.menu-open .mobile-menu-logo {
         display: flex !important;
         position: absolute;
+
         top: 25px;
         left: 30px;
+
         width: auto;
         margin: 0;
         padding: 0;
+
         z-index: 1002;
     }
 
+    /* Logo linkinin ölçüləri */
     .main-nav .nav-top-bottom.menu-open .mobile-menu-logo a {
         display: block;
         width: auto;
         padding: 0;
     }
 
+    /* Mobil logo şəkli */
     .main-nav .nav-top-bottom.menu-open .mobile-menu-logo img {
         display: block !important;
+
         width: 110px !important;
         max-width: 110px;
         height: auto !important;
+
         object-fit: contain;
     }
 }
 
+
+/* Kiçik telefonlarda mobil loqonun mövqeyi */
 @media (max-width: 617px) {
+
     .main-nav .nav-top-bottom.menu-open .mobile-menu-logo {
         left: 20px;
         top: 22px;

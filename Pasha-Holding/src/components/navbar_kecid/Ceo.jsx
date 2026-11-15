@@ -1,50 +1,80 @@
 
-import React from 'react';
 import './Ceo.css';
 import './CeoResponsive.css';
 
 function Ceo() {
     return (
         <div className="ceo-page">
+
+            {/* Səhifənin əsas məzmunu */}
             <div className="ceo-content">
 
                 <h1>Direktorun Müraciəti</h1>
 
                 <div className="ceo-content-main">
 
+                    {/* Direktorun müraciət mətni */}
                     <div className="ceo-text">
                         <p>
-                            `
-                            2006-cı ilin noyabr ayında yaradılan, baş ofisi Bakıda yerləşən "PAŞA Holding" MMC fəaliyyət göstərdiyi illər ərzində Azərbaycanın ən öndə gedən və korporativ idarəetmə təcrübəsini öz fəaliyyətində rəhbər tutan milli özəl biznes qruplarından birinə çevrilib. Holdinqin əsas investisiyaları maliyyə xidmətləri - bankçılıq və sığorta, tikinti, turizm və daşınmaz əmlak kimi qeyri-neft sektorlarında cəmlənib. Bir neçə il ərzində Holdinq, səhmdarların Korporativ Dəyərlərini və Baxışını nəzərə alaraq uğurlu korporativ idarəetmə təcrübəsi, biznes diversifikasiyasının tətbiqi və regional genişlənmə strategiyası sayəsində regionun mühüm və çoxtərəfli investisiya şirkətinə çevrilib.
+                            2006-cı ilin noyabr ayında yaradılan, baş ofisi Bakıda yerləşən
+                            "PAŞA Holding" MMC fəaliyyət göstərdiyi illər ərzində Azərbaycanın
+                            ən öndə gedən və korporativ idarəetmə təcrübəsini öz fəaliyyətində
+                            rəhbər tutan milli özəl biznes qruplarından birinə çevrilib.
+                            Holdinqin əsas investisiyaları maliyyə xidmətləri - bankçılıq və
+                            sığorta, tikinti, turizm və daşınmaz əmlak kimi qeyri-neft
+                            sektorlarında cəmlənib. Bir neçə il ərzində Holdinq, səhmdarların
+                            Korporativ Dəyərlərini və Baxışını nəzərə alaraq uğurlu korporativ
+                            idarəetmə təcrübəsi, biznes diversifikasiyasının tətbiqi və regional
+                            genişlənmə strategiyası sayəsində regionun mühüm və çoxtərəfli
+                            investisiya şirkətinə çevrilib.
                         </p>
 
                         <p>
-                            Biz hazırkı gərgin biznes mühitində etimadlılığın əhəmiyyətinə qəti şəkildə inanırıq və Korporativ Dəyərlər üzərində qurulan strategiyamızın etibarlılığına əminik. Biz ən uğurlu korporativ təcrübənin, etimad və davamlılığın bariz nümunəsi olmaqla yanaşı, fəaliyyət göstərdiyimiz ölkələrə, səhmdarlarımıza, əməkdaşlarımıza, müştərilərimizə və tərəfdaşlarımıza xüsusi diqqət və qayğı ilə yanaşırıq.
+                            Biz hazırkı gərgin biznes mühitində etimadlılığın əhəmiyyətinə
+                            qəti şəkildə inanırıq və Korporativ Dəyərlər üzərində qurulan
+                            strategiyamızın etibarlılığına əminik. Biz ən uğurlu korporativ
+                            təcrübənin, etimad və davamlılığın bariz nümunəsi olmaqla yanaşı,
+                            fəaliyyət göstərdiyimiz ölkələrə, səhmdarlarımıza, əməkdaşlarımıza,
+                            müştərilərimizə və tərəfdaşlarımıza xüsusi diqqət və qayğı ilə
+                            yanaşırıq.
                         </p>
                     </div>
 
+                    {/* Direktorun şəkli və məlumatları */}
                     <div className="ceo-img">
-                        <img src="/images/ceo.png" alt="PASHA Holding CEO" />
+                        <img
+                            src="/images/ceo.png"
+                            alt="PAŞA Holding Baş İcraçı Direktoru"
+                        />
 
                         <div className="ceo-img-info">
                             <h3>Cəlal Qasımov</h3>
-                            <p>"PAŞA Holding"-in Baş İcraçı Direktoru"</p>
+                            <p>"PAŞA Holding"-in Baş İcraçı Direktoru</p>
                         </div>
                     </div>
 
                 </div>
-
             </div>
+
+            {/* Səhifənin aşağı hissəsi - Footer */}
             <footer className="ceo-footer">
 
                 <div className="ceo-footer-left">
                     <span>© 2026 PAŞA Holding</span>
 
                     <span>
-                        Site by <a href="https://www.jis.az/" target="_blank" rel="noreferrer">JIS</a>
+                        Site by{' '}
+                        <a
+                            href="https://www.jis.az/"
+                            target="_blank"
+                            rel="noreferrer"
+                        >
+                            JIS
+                        </a>
                     </span>
                 </div>
 
+                {/* Sosial şəbəkə keçidləri */}
                 <div className="ceo-footer-right">
                     <div className="ceo-footer-socials">
                         <span>Bizi izlə</span>

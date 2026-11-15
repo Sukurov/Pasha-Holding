@@ -1,13 +1,16 @@
-/* ==============================
-   ÜMUMİ AYARLAR
-============================== */
 
+ /* ==============================
+    ÜMUMİ AYARLAR
+ ============================== */
+
+/* Bütün elementlərin standart boşluqlarını sıfırlayır */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Saytın ümumi şrift və fon ayarları */
 body {
     background: #608AC4;
     font-family: "Segoe UI", system-ui, sans-serif;
@@ -20,6 +23,7 @@ body {
    ƏSAS NAVBAR
 ============================== */
 
+/* Navbar-ın əsas yerləşmə və ölçü ayarları */
 .main-nav {
     position: relative;
     z-index: 1000;
@@ -40,7 +44,7 @@ body {
 }
 
 
-/* Navbar-ın menyu hissələri */
+/* Yuxarı və aşağı menyunu birləşdirən konteyner */
 
 .nav-top-bottom {
     display: flex;
@@ -53,6 +57,7 @@ body {
    YUXARI MENYU
 ============================== */
 
+/* Yuxarı menyu elementlərini eyni xəttə düzür */
 .nav-top,
 .nav-top ul,
 .nav-top-right {
@@ -60,37 +65,44 @@ body {
     align-items: center;
 }
 
+/* Yuxarı menyunun elementləri arasındakı məsafə */
 .nav-top {
     gap: 10px;
 }
 
+/* Yuxarı menyu linklərinin düzülüşü */
 .nav-top ul {
     gap: 20px;
     list-style: none;
 }
 
+/* Yuxarı menyudakı linklərin görünüşü */
 .nav-top a {
     color: rgba(255, 255, 255, 0.6);
     font-size: 0.9rem;
     text-decoration: none;
 }
 
+/* Linkin üzərinə gəldikdə altından xətt çəkir */
 .nav-top a:hover {
     text-decoration: underline;
 }
 
+/* Sağ tərəfdəki sosial məsuliyyət bölməsi */
 .nav-top-right {
     gap: 15px;
     padding: 0 10px;
     border-left: 1px solid rgba(255, 255, 255, 0.6);
 }
 
+/* Sosial məsuliyyət ikonunun görünüşü */
 .nav-top-right .icon {
     padding-left: 5px;
     color: white;
     font-size: 2rem;
 }
 
+/* Sosial məsuliyyət linkinin rəngi */
 .nav-top-right a {
     color: white;
 }
@@ -100,17 +112,20 @@ body {
    AŞAĞI MENYU
 ============================== */
 
-.nav-bottom>ul {
+/* Əsas menyu elementlərini üfüqi düzür */
+.nav-bottom > ul {
     display: flex;
     align-items: center;
     gap: 25px;
     list-style: none;
 }
 
+/* Hər dropdown menyu üçün əsas konteyner */
 .dropdown-parent {
     position: relative;
 }
 
+/* Dropdown menyunu açan düymənin görünüşü */
 .dropdown-toggle {
     padding: 0;
     border: none;
@@ -121,6 +136,7 @@ body {
     cursor: pointer;
 }
 
+/* Düymənin üzərinə gəldikdə altından xətt çəkir */
 .dropdown-toggle:hover {
     text-decoration: underline;
 }
@@ -130,6 +146,7 @@ body {
    AÇILAN ALT MENYULAR
 ============================== */
 
+/* Dropdown menyunun ilkin görünüşü və yerləşməsi */
 .dropdown {
     position: absolute;
     top: calc(100% + 25px);
@@ -143,18 +160,20 @@ body {
     border-radius: 15px;
     background: white;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+    /* Menyunu ilkin olaraq gizlədir */
     opacity: 0;
     visibility: hidden;
     transform: translateY(-20px);
+
+    /* Açılıb-bağlanma animasiyası */
     transition:
         opacity 0.2s ease,
         transform 0.2s ease,
         visibility 0.2s ease;
 }
 
-
-/* Alt menyunun hover sahəsi */
-
+/* Dropdown-a keçid zamanı hover sahəsi yaradır */
 .dropdown-parent::after {
     position: absolute;
     top: 100%;
@@ -164,9 +183,7 @@ body {
     content: "";
 }
 
-
-/* Alt menyunun açılması */
-
+/* Mouse üzərinə gəldikdə və ya düymə ilə açıldıqda menyunu göstərir */
 .dropdown-parent:hover .dropdown,
 .dropdown-parent.dropdown-open .dropdown {
     opacity: 1;
@@ -174,9 +191,7 @@ body {
     transform: translateY(0);
 }
 
-
-/* Alt menyudakı linklər */
-
+/* Dropdown daxilindəki linklərin görünüşü */
 .dropdown a {
     padding: 13px 20px;
     color: #6C93C8;
@@ -184,23 +199,24 @@ body {
     line-height: 1.5;
     text-decoration: none;
 
+    /* Hover zamanı rəng və padding animasiyası */
     transition:
         background-color 0.2s ease,
         padding-left 0.2s ease;
 }
 
+/* Linkin üzərinə gəldikdə fon rəngini və sol boşluğu dəyişir */
 .dropdown a:hover {
     padding-left: 27px;
     background: #e7c6c696;
 }
 
-
-/* Alt menyuların ölçüləri */
-
+/* İkinci dropdown-dan başlayaraq menyuların enini 200px edir */
 .dropdown-parent:nth-child(n + 2) .dropdown {
     width: 200px;
 }
 
+/* Yeddinci dropdown-dan başlayaraq menyuların enini 150px edir */
 .dropdown-parent:nth-child(n + 7) .dropdown {
     width: 150px;
 }
@@ -210,6 +226,7 @@ body {
    SAĞ TƏRƏFDƏKİ İKONLAR
 ============================== */
 
+/* Dil və axtarış ikonlarını sağ tərəfə yerləşdirir */
 .nav-right {
     display: flex;
     align-items: center;
@@ -220,9 +237,7 @@ body {
     color: white;
 }
 
-
-/* Dil seçimi */
-
+/* Dil seçimi bölməsi */
 .language {
     display: flex;
     align-items: center;
@@ -231,6 +246,7 @@ body {
     cursor: pointer;
 }
 
+/* Dil seçiminin çərçivəsi */
 .language span {
     display: flex;
     align-items: center;
@@ -241,9 +257,7 @@ body {
     border-radius: 2px;
 }
 
-
-/* Axtarış ikonu */
-
+/* Axtarış ikonunun ölçüsü və yerləşməsi */
 .search-icon {
     display: flex;
     align-items: center;
@@ -256,6 +270,7 @@ body {
    MOBİL MENYU DÜYMƏSİ
 ============================== */
 
+/* Mobil menyu düyməsi desktop-da gizlədilir */
 .menu-toggle {
     display: none;
     padding: 5px;
@@ -271,8 +286,7 @@ body {
    DAXİLİ SƏHİFƏLƏRİN NAVBAR-I
 ============================== */
 
-/* İlkin fon və keçid effekti */
-
+/* Daxili səhifələrdə Navbar ekranın yuxarısında sabit qalır */
 .main-nav.inner-page {
     position: fixed;
     top: 0;
@@ -280,12 +294,12 @@ body {
     z-index: 1000;
     width: 100%;
     background: transparent;
+
+    /* Fon rənginin dəyişməsinə keçid effekti verir */
     transition: background 0.3s ease;
 }
 
-
-/* Daxili səhifələrdə yaşıl yazılar və ikonlar */
-
+/* Daxili səhifələrdə menyu yazılarını və ikonları yaşıl edir */
 .main-nav.inner-page .nav-top a,
 .main-nav.inner-page .nav-top-right .icon,
 .main-nav.inner-page .dropdown-toggle,
@@ -295,29 +309,27 @@ body {
     color: #00845A;
 }
 
-/* Yuxarı sağ menyudakı yazı */
-
+/* Yuxarı sağ menyudakı yazının rəngi */
 .main-nav.inner-page .nav-top-right a {
     color: #00845A;
 }
 
-
-/* Yuxarı menyunun sol xətti */
-
+/* Yuxarı sağ menyunun sol sərhəd xəttinin rəngi */
 .main-nav.inner-page .nav-top-right {
     border-left-color: #00845A;
 }
 
-
-/* Daxili səhifələrdə açılan alt menyular */
+/* Daxili səhifələrdə dropdown menyunun boşluqları */
 .main-nav.inner-page .dropdown {
     padding: 8px 0;
 }
 
+/* Daxili səhifələrdə dropdown linklərinin rəngi */
 .main-nav.inner-page .dropdown a {
     color: #00845A;
 }
 
+/* Dropdown linklərinin üzərinə gəldikdə rəngi tündləşdirir */
 .main-nav.inner-page .dropdown a:hover {
     color: #006B48;
 }
@@ -327,8 +339,7 @@ body {
    SCROLL ZAMANI NAVBAR
 ============================== */
 
-/* Scroll zamanı ağ fon */
-
+/* Səhifə aşağı sürüşdürüldükdə Navbar-a ağ fon və kölgə verir */
 .main-nav.inner-page.scrolled {
     background: white;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
@@ -338,13 +349,13 @@ body {
     z-index: 99999;
 }
 
+/* Scroll zamanı logo ölçüsünü kiçildir */
 .main-nav.inner-page.scrolled .logo img {
     width: 140px;
     transition: width 0.2s ease;
 }
 
-/* Scroll zamanı dil çərçivəsi */
-
+/* Scroll zamanı dil seçiminin çərçivəsini yaşıl edir */
 .main-nav.inner-page.scrolled .language span {
     border-color: #00845A;
 }

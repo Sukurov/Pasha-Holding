@@ -1,18 +1,24 @@
-/* Mobil uyğunluq (Responsive dizayn) */
+
+/* PLANŞET VƏ KİÇİK EKRANLAR - 992px */
 @media (max-width: 992px) {
+
+    /* Ofis kartları alt-alta düzülür */
     .offices-grid {
         grid-template-columns: 1fr;
-        /* Planşet və kiçik ekranlarda ofislər alt-alta düşür */
         gap: 24px;
     }
 }
 
+
+/* MOBİL EKRANLAR - 768px */
 @media (max-width: 768px) {
+
+    /* Əlaqə səhifəsinin boşluqları */
     .contact-page {
         padding: 120px 16px 60px;
-        /* Mobil ekranlarda yuxarı boşluq tənzimlənir */
     }
 
+    /* Başlıq və açıqlama */
     .contact-title {
         font-size: 32px;
     }
@@ -21,16 +27,18 @@
         font-size: 15px;
     }
 
+    /* Kartların daxili boşluqları */
     .office-card,
     .contact-form-card {
         padding: 28px 20px;
     }
 
+    /* Şəhər adı */
     .office-city {
         font-size: 20px;
     }
 
-    /* Mobil cihazlarda floating alert ekranın yuxarısına daha uyğun oturur */
+    /* Bildiriş pəncərəsi */
     .floating-alert {
         min-width: 90%;
         max-width: 90%;
@@ -38,6 +46,7 @@
         padding: 14px 18px;
     }
 
+    /* Bildirişin yuxarıdan məsafəsi */
     .floating-alert.show {
         top: 20px;
     }

@@ -1,32 +1,49 @@
 
+/* =========================================
+   BODY
+   Ana səhifədə scroll-u deaktiv edir
+========================================= */
+
 body {
     overflow: hidden;
 }
 
-/* CLOUD ANIMATION */
+
+/* =========================================
+   CLOUD ANIMATION
+   Səhifənin yuxarı hissəsində bulud animasiyası
+========================================= */
 
 .cloud-layer {
     position: absolute;
     top: -10px;
     left: 0;
     z-index: 2;
+
     width: 100%;
     height: 250px;
+
     overflow: hidden;
     pointer-events: none;
 }
 
+/* Bulud şəkli */
 .cloud-image {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 1770px;
     height: 230px;
+
     object-fit: contain;
     opacity: 0;
+
+    /* Buludun hərəkət animasiyası */
     animation: cloudMove 30s linear infinite;
 }
 
+/* Buludun sağdan sola hərəkəti */
 @keyframes cloudMove {
     0% {
         transform: translateX(100vw);
@@ -54,119 +71,168 @@ body {
     }
 }
 
-/* HERO SECTION */
+
+/* =========================================
+   HERO SECTION
+   Ana səhifənin əsas məzmun hissəsi
+========================================= */
 
 .hero-main {
     display: flex;
     align-items: stretch;
+
     width: 100%;
     min-height: calc(100vh - 120px);
+
     padding: 0 50px;
     box-sizing: border-box;
+
     overflow: hidden;
 }
 
+/* Başlıq və mətn hissəsi */
 .hero-text {
     display: flex;
     flex-direction: column;
     gap: 20px;
+
     padding: 100px 0 100px 70px;
+
     z-index: 100;
 }
 
+/* Əsas başlıq */
 .hero-text span {
     color: white;
+
     font-family: 'Times New Roman', Times, serif;
     font-size: 4.5rem;
 }
 
+/* Açıqlama mətni */
 .hero-text p {
     color: white;
     font-size: 0.9rem;
 }
 
+/* Ətraflı məlumat linkinin yerləşməsi */
 .hero-text-hover {
     display: flex;
     align-items: center;
     gap: 10px;
+
     padding-top: 30px;
     cursor: pointer;
 }
 
+/* Ətraflı məlumat linki */
 .hero-text-hover a {
     color: white;
     text-decoration: none;
     letter-spacing: 2px;
+
     transition: 0.2s;
 }
 
+/* Link üzərinə gəldikdə */
 .hero-text-hover a:hover {
     letter-spacing: 2.5px;
 }
 
+/* Linkin yanındakı dekorativ xətt */
 .hero-text-hover-line {
     width: 150px;
     height: 1px;
+
     background-color: white;
 }
 
-/* BUILDING IMAGE */
+
+/* =========================================
+   BUILDING IMAGE
+   Bina şəklinin yerləşməsi
+========================================= */
 
 .hero-img {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+
     width: 60%;
     min-width: 0;
+
     margin-left: auto;
 }
 
+/* Bina şəkli */
 .hero-img img {
     display: block;
+
     z-index: 4;
+
     width: 100%;
     max-width: 100%;
     max-height: calc(100vh - 100px);
+
     height: auto;
+
     object-fit: contain;
     object-position: bottom;
 }
 
-/* WHITE BOTTOM DECORATION */
+
+/* =========================================
+   WHITE BOTTOM DECORATION
+   Səhifənin aşağı hissəsindəki ağ dekorasiya
+========================================= */
 
 .white-div {
     position: absolute;
     bottom: 0;
     left: 0;
+
     width: 100%;
+
     overflow: hidden;
     pointer-events: none;
 }
 
+/* Dekorativ şəkil */
 .white-div img {
     display: block;
+
     width: 100%;
     height: auto;
 }
 
-/* FOOTER */
+
+/* =========================================
+   FOOTER
+   Səhifənin aşağı hissəsindəki məlumatlar
+========================================= */
 
 .footer-main {
     position: absolute;
     bottom: 0;
     left: 0;
+
     z-index: 10;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     width: 100%;
     min-height: 60px;
+
     padding: 12px 50px;
     box-sizing: border-box;
+
     color: white;
     font-size: 12px;
 }
 
+/* Footer elementlərinin ümumi düzülüşü */
 .footer-left,
 .footer-right,
 .footer-socials {
@@ -174,59 +240,79 @@ body {
     align-items: center;
 }
 
+/* Sol tərəfdəki linklər */
 .footer-left {
     gap: 30px;
 }
 
+/* Footer linklərinin rəngi */
 .footer-left a {
     color: white;
     text-decoration: none;
 }
 
+/* Sosial media ikonlarının aralığı */
 .footer-socials {
     gap: 15px;
 }
 
+/* Sosial media linkləri */
 .footer-socials a {
     color: white;
     font-size: 17px;
     text-decoration: none;
+
     transition: 0.3s;
 }
 
+/* Sosial media ikonlarının hover effekti */
 .footer-socials a:hover {
     opacity: 0.7;
 }
 
-/* PAGE NAVIGATION DOTS */
+
+/* =========================================
+   PAGE NAVIGATION DOTS
+   Səhifələr arasında keçid nöqtələri
+========================================= */
 
 .page-dots {
     position: absolute;
     bottom: 20px;
     left: 50%;
+
     z-index: 20;
+
     display: flex;
     align-items: center;
     gap: 12px;
+
     transform: translateX(-50%);
 }
 
+/* Keçid düymələri */
 .page-dots button {
     width: 13px;
     height: 13px;
+
     padding: 0;
+
     border: 1px solid white;
     border-radius: 50%;
+
     background: transparent;
     cursor: pointer;
+
     transition: 0.3s;
 }
 
+/* Aktiv və üzərinə gəlinmiş nöqtə */
 .page-dots button.active,
 .page-dots button:hover {
     background-color: white;
 }
 
+/* Hover zamanı nöqtənin böyüməsi */
 .page-dots button:hover {
     transform: scale(1.3);
 }
